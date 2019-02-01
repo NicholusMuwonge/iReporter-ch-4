@@ -37,13 +37,13 @@ function login() {
         else if (response_object.record_type == "TRUE"){
             token = response_object["access_token"];
             tokenstorage.SetItem('token',token);
-            window.location.assign("https://nicholusmuwonge.github.io/iReporter/UI/admin_dashboard");
+            window.location.assign("https://ireporter-ui.herokuapp.com/UI/admin_dashboard");
         }
 
         else{
             token = response_object["access_token"];
             tokenstorage.SetItem('token',token);
-            window.location.assign("https://nicholusmuwonge.github.io/iReporter/UI/active");
+            window.location.assign("https://ireporter-ui.herokuapp.com/iReporter/UI/active");
         }
 
     })
