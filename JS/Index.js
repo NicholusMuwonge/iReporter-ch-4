@@ -1,9 +1,10 @@
 // This is where I attach the index html template to the backend
-
-function login() {
+document.getElementById('signin').addEventListener('submit', login);
+function login(e) {
+    e.preventDefault();
     const route= "https://databasetests.herokuapp.com/api/v2/auth/login/";  //this is the heroku backend link
     var keys ={
-                username : document.getElementById('username').value ,
+                username : document.getElementById('username').value,
                 password : document.getElementById('password').value
     }
     const options= {
