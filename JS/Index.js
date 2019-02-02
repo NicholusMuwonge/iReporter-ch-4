@@ -18,9 +18,10 @@ function login(e) {
                 cache : 'no-chache'
     }
     fetch(route,options)
-    .then(function (res) {
-        return res.json();
-    })
+    // .then(function (res) {
+    //     return res.json();
+    // })
+    .then (res => res.json())
     .then (response_object => {
         console.log(response_object);
         if (response_object.error_message == "some fields are missing"){
