@@ -14,8 +14,8 @@ function login(e) {
                 headers : {
                     'Accept' : 'application/json',
                     'content-type' : 'application/json'
-                },
-                cache : 'no-chache'
+                }
+                //cache : 'no-chache'
     }
     fetch(route,options)
     // .then(function (res) {
