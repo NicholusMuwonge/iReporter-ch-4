@@ -1,7 +1,7 @@
 // This is where I attach the index html template to the backend
 
 function login() {
-    const route= "https://databasetests.herokuapp.com/api/v2/auth/login/"
+    const route= "https://databasetests.herokuapp.com/api/v2/auth/login/"  //this is the heroku backend link
     var keys ={
                 username : document.getElementById('username').value ,
                 password : document.getElementById('password').value
@@ -37,15 +37,20 @@ function login() {
         else if (response_object.record_type == "TRUE"){
             token = response_object["access_token"];
             tokenstorage.SetItem('token',token);
-            window.location.assign("https://ireporter-ui.herokuapp.com/UI/admin_dashboard");
+            window.location.assign(
+                "https://nicholusmuwonge.github.io/iReporter/UI/admin_dashboard/"  
+                ); //adminstrator dashbord using ghpages
         }
 
         else{
             token = response_object["access_token"];
             tokenstorage.SetItem('token',token);
-            window.location.assign("https://ireporter-ui.herokuapp.com/iReporter/UI/active");
+            window.location.assign(
+                "https://nicholusmuwonge.github.io/iReporter/UI/active/"
+                ); //user feed ghpages
         }
 
     })
+    .then (res => console.log(response_object))
     .catch(error => console.log(error));
     }
