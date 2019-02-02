@@ -16,42 +16,42 @@ function login() {
                 cache : 'no-chache'
     }
     fetch(route,options)
-        .then(function (res) {
-            return res.json();
-        })
-        .then (response_object => {
-            if (response_object.error_message == "some fields are missing"){
-                return document.getElementById('error').innerHTML = "some fields \
-                are missing";
-            }
-            else if (response_object.error_message == 'Please use character strings'){
-                return document.getElementById('error').innerHTML = 'Please use\
-                character strings';
-            }
-            else if (response_object.error_message == 'Some fields have no data'){
-                return document.getElementById('error').innerHTML = 'Some fields\
-                have no data';
-            }
-            else if (response_object.error_message == 'User does not exist.'){
-                return document.getElementById('error').innerHTML = 'User does \
-                not exist.';
-            }
-            else if (response_object.record_type == "TRUE"){
-                token = response_object["access_token"];
-                tokenstorage.SetItem('token',token);
-                window.location.assign(
-                    "admin_dashboard.html"  
-                    ); //adminstrator dashbord using ghpages
-            }
-            else{
-                token = response_object["access_token"];
-                tokenstorage.SetItem('token',token);
-                window.location.assign(
-                    "active.html"
-                    ); //user feed ghpages
-            }
+    .then(function (res) {
+        return res.json();
+    })
+    .then (response_object => {
+        if (response_object.error_message == "some fields are missing"){
+            return document.getElementById('error').innerHTML = "some fields \
+            are missing";
+        }
+        else if (response_object.error_message == 'Please use character strings'){
+            return document.getElementById('error').innerHTML = 'Please use\
+            character strings';
+        }
+        else if (response_object.error_message == 'Some fields have no data'){
+            return document.getElementById('error').innerHTML = 'Some fields\
+            have no data';
+        }
+        else if (response_object.error_message == 'User does not exist.'){
+            return document.getElementById('error').innerHTML = 'User does \
+            not exist.';
+        }
+        else if (response_object.record_type == "TRUE"){
+            token = response_object["access_token"];
+            tokenstorage.SetItem('token',token);
+            window.location.assign(
+                "admin_dashboard.html"  
+                ); //adminstrator dashbord using ghpages
+        }
+        else{
+            token = response_object["access_token"];
+            tokenstorage.SetItem('token',token);
+            window.location.assign(
+                "active.html"
+                ); //user feed ghpages
+        }
 
-        })
-        .then (res => console.log(response_object))
-        .catch(error => console.log(error));
+    })
+    // .then (res => console.log(response_object))
+    .catch(error => console.log(error));
     }
