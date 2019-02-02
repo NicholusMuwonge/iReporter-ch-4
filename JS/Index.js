@@ -1,5 +1,5 @@
 // This is where I attach the index html template to the backend
-document.getElementById('signin').addEventListener('submit', login);
+document.getElementById('signin').addEventListener('submit', Login);
 function login(e) {
     e.preventDefault();
     const route= "https://databasetests.herokuapp.com/api/v2/auth/login/";  //this is the heroku backend link
@@ -10,6 +10,7 @@ function login(e) {
     const options= {
                 method : 'POST',
                 body : JSON.stringify(keys),
+                mode : 'cors',
                 headers : {
                     'Accept' : 'application/json',
                     'content-type' : 'application/json'
