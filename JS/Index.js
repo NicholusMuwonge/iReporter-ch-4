@@ -2,6 +2,7 @@
 document.getElementById('signin').addEventListener('submit',login);
 function login(e) {
     e.preventDefault();
+    var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     const route= "https://databasetests.herokuapp.com/api/v2/auth/login/";  //this is the heroku backend link
     var keys ={
                 username : document.getElementById('username').value,
@@ -17,7 +18,7 @@ function login(e) {
                 },
                 cache : 'reload'
     }
-    fetch(route,options)
+    fetch(route + proxyUrl,options)
     // .then(function (res) {
     //     return res.json();
     // })
