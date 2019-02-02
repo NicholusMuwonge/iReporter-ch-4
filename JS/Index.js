@@ -18,7 +18,7 @@ function login(e) {
                 },
                 cache : 'reload'
     }
-    fetch(route + proxyUrl,options)
+    fetch(proxyUrl + route,options)
     // .then(function (res) {
     //     return res.json();
     // })
