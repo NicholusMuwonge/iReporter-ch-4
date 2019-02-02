@@ -40,14 +40,14 @@ function login() {
                 token = response_object["access_token"];
                 tokenstorage.SetItem('token',token);
                 window.location.assign(
-                    "https://nicholusmuwonge.github.io/iReporter/UI/admin_dashboard/"  
+                    "admin_dashboard.html"  
                     ); //adminstrator dashbord using ghpages
             }
             else{
                 token = response_object["access_token"];
                 tokenstorage.SetItem('token',token);
                 window.location.assign(
-                    "https://nicholusmuwonge.github.io/iReporter/UI/active/"
+                    "active.html"
                     ); //user feed ghpages
             }
 
