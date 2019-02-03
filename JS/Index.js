@@ -29,7 +29,7 @@ function login(e) {
     // })
     .then (res => res.json())
     .then (response_object => {
-        console.log(response_object);
+        
         // if (response_object.error_message == "some fields are missing"){
         //     return document.getElementById('error').innerHTML = "some fields \
         //     are missing";
