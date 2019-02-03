@@ -9,8 +9,8 @@ function login(e) {
     let user_password = document.getElementById('password').value;
     
     let keys= {
-        username : user_name ,
-        password : user_password
+        user_name : user_name ,
+        user_password : user_password
     }
 
     const options= {
