@@ -4,7 +4,7 @@ function login(e) {
     e.preventDefault();
     // var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     const route= "https://databasetests.herokuapp.com/api/v2/auth/login/";  //this is the heroku backend link
-    
+    var localStorage= 
     let user_name = document.getElementById('username').value ; 
     let user_password = document.getElementById('password').value;
     
@@ -48,14 +48,14 @@ function login(e) {
         }
         else if (response_object.logged_in_as == "nicholas"){
             token = response_object["access_token"];
-            localStorage.SetItem('token',token);
+            localStorage.SetItem('access_token',token);
             window.location.assign(
                 "admin_dashboard.html"  
                 ); //adminstrator dashbord using ghpages
         }
         else{
             token = response_object["access_token"];
-            localStorage.SetItem('token',token);
+            localStorage.SetItem('access_token',token);
             window.location.assign(
                 "active.html"
                 ); //user feed ghpages
