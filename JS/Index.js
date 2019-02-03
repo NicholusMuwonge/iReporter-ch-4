@@ -29,7 +29,7 @@ function login(e) {
         //     return document.getElementById('error').innerHTML = "some fields \
         //     are missing";
         // }
-        else if (response_object.error_message == 'Please use character strings'){
+        if (response_object.error_message == 'Please use character strings'){
             return document.getElementById('error').innerHTML = 'Please use\
             character strings';
         }
