@@ -5,7 +5,7 @@ function login(e) {
     // var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     const route= "https://databasetests.herokuapp.com/api/v2/auth/login/";  //this is the heroku backend link
     var localStorage= 
-    let user_name = document.getElementById('username').value ; 
+    let user_name = document.getElementById('username').value; 
     let user_password = document.getElementById('password').value;
     
     let keys= {
