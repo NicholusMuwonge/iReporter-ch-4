@@ -46,16 +46,16 @@ function login(e) {
             return document.getElementById('error').innerHTML = 'User does \
             not exist.';
         }
-        else if (response_object.record_type == "TRUE"){
-            token = response_object["access_token"];
-            localStorage.SetItem('token',token);
+        else if (response_object.logged_in_as == "nicholas"){
+            // token = response_object["access_token"];
+            // localStorage.SetItem('token',token);
             window.location.assign(
                 "admin_dashboard.html"  
                 ); //adminstrator dashbord using ghpages
         }
         else{
-            token = response_object["access_token"];
-            localStorage.SetItem('token',token);
+            // token = response_object["access_token"];
+            // localStorage.SetItem('token',token);
             window.location.assign(
                 "active.html"
                 ); //user feed ghpages
