@@ -47,15 +47,15 @@ function login(e) {
             not exist.';
         }
         else if (response_object.logged_in_as == "nicholas"){
-            // token = response_object["access_token"];
-            // localStorage.SetItem('token',token);
+            token = response_object["access_token"];
+            localStorage.SetItem('token',token);
             window.location.assign(
                 "admin_dashboard.html"  
                 ); //adminstrator dashbord using ghpages
         }
         else{
-            // token = response_object["access_token"];
-            // localStorage.SetItem('token',token);
+            token = response_object["access_token"];
+            localStorage.SetItem('token',token);
             window.location.assign(
                 "active.html"
                 ); //user feed ghpages
