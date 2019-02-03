@@ -43,14 +43,14 @@ function login(e) {
         }
         else if (response_object.record_type == "TRUE"){
             token = response_object["access_token"];
-            tokenstorage.SetItem('token',token);
+            localStorage.SetItem('token',token);
             window.location.assign(
                 "admin_dashboard.html"  
                 ); //adminstrator dashbord using ghpages
         }
         else{
             token = response_object["access_token"];
-            tokenstorage.SetItem('token',token);
+            localStorage.SetItem('token',token);
             window.location.assign(
                 "active.html"
                 ); //user feed ghpages
