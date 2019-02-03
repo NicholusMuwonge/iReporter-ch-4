@@ -47,14 +47,14 @@ function login(e) {
             not exist.';
         }
         else if (response_object.logged_in_as == "nicholas"){
-            token = response_object["access_token"];
+            token = response_object.access_token;
             localStorage.setItem('access_token',token);
             window.location.assign(
                 "admin_dashboard.html"  
                 ); //adminstrator dashbord using ghpages
         }
         else if (response_object.logged_in_as != 'nicholas'){
-            token = response_object["access_token"];
+            token = response_object.access_token;
             localStorage.setItem('access_token',token);
             window.location.assign(
                 "active.html"
