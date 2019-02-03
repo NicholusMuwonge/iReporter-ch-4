@@ -42,7 +42,7 @@ function login(e) {
             return document.getElementById('error').innerHTML = 'Some fields\
             have no data';
         }
-        else if (response_object.error_message == 'User does not exist.'){
+        else if (response_object.message == 'User does not exist.'){
             return document.getElementById('error').innerHTML = 'User does \
             not exist.';
         }
