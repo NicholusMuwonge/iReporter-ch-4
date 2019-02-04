@@ -4,8 +4,8 @@ function signup(e) {
     e.preventDefault();
     const route= "https://databasetests.herokuapp.com/api/v2/auth/signup/";
 
-    let user_name = document.getElementById('username').value; 
-    let user_password = document.getElementById('password').value;
+    let user_name = document.getElementById('user_name').value; 
+    let user_password = document.getElementById('user_password').value;
     let email = document.getElementById('email').value;
     let password2 = document.getElementById('password2').value;
 
