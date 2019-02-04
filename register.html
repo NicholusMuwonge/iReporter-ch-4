@@ -7,7 +7,7 @@
 
 <title>iReporter | Register</title>
      <link type="text/css" href="css/register.css" rel="stylesheet">
-     <script src="JS/register.js"></script>
+     <script src="./JS/register.js"></script>
 </head>
 
 <body style="background-image:url('images/typewriter.jpg');">     
@@ -15,26 +15,29 @@
 <section class="container " style="height:420px; margin-top: 8%;" >
         <h1 align="center">iReporter</h1>
         <h2 align="center">REGISTER</h2>
-        <form action="#">
+        <form action="#" id="sigup-form">
             <table width="80%" align="center" border="0">
             <tbody>
               <tr>
-                <td id = "username"><input  required="" name="username" placeholder="Username" type="text"></td>
+                <td><input  required="" id = "username" name="user_name" placeholder="Username" type="text"></td>
               </tr>
               <tr>
-                    <td id= "email"><input  required="" name="email" placeholder="Email Address" type="email"></td>
+                    <td ><input  required="" name="email" id= "email" placeholder="Email Address" type="email"></td>
                   </tr>
               <tr>
-                <td id ="password"><input required="" name="password" placeholder="Password" type="password"></td>
+                <td ><input required="" name="password" id ="user_password" placeholder="Password" type="password"></td>
               </tr>
               <tr>
-                    <td id="password2" ><input  required="" name="password2" placeholder="Confirm Password" type="password"></td>
+                    <td  ><input  required="" name="password2" id="password2" placeholder="Confirm Password" type="password"></td>
                   </tr>
               <tr>
-                <td id = "submit"><button type="submit">Create account</button></td>
+                <td><button id = "submit" type="submit">Create account</button></td>
               </tr>
               <tr>
                 <td><p >I have an account!  <a href="index.html">Login</a></td>
+              </tr>
+              <tr>
+                <td><p id = "message"></p></td>
               </tr>
             </tbody>
           </table>
