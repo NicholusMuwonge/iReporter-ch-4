@@ -55,7 +55,7 @@ function signup(e) {
 
         else if (response_object.error_message == 'email already exists'){
             return document.getElementById('message').innerHTML =
-                "Please just go on and signin";
+                "Please just go on and signin 👆";
         }
 
         else if (response_object.error_message == 'Username already taken'){
@@ -65,7 +65,7 @@ function signup(e) {
 
         else if (response_object.status == 'success'){
             return document.getElementById('message').innerHTML =
-                'Your account has been created successfully';
+                'Your account has been created successfully 😋';
         }
         
     })
