@@ -34,17 +34,17 @@ function signup(e) {
             );
         }
         else if (response_object.error_message == 'some fields are missing'){
-            return document.getElementById('error').innerHTML =
+            return document.getElementById('message').innerHTML =
                 'some fields are missing';
         }
         else if (response_object.error_message == 'Password is wrong. It should be at-least 5 characters long, and alphanumeric.'){
-            return document.getElementById('error').innerHTML =
+            return document.getElementById('message').innerHTML =
                 "Password is wrong. It should be at-least 5 characters long, and alphanumeric.";
         }
         
         else if (response_object.error_message == "User email {0} is wrong, \
         It should be in the format (xxxxx@xxxx.xxx).format(email)"){
-            return document.getElementById('error').innerHTML =
+            return document.getElementById('message').innerHTML =
                 "Improper email format";
         }
         else if (response_object.error_message == "A name should consist of \
@@ -54,17 +54,17 @@ function signup(e) {
         }
 
         else if (response_object.error_message == 'email already exists'){
-            return document.getElementById('error').innerHTML =
+            return document.getElementById('message').innerHTML =
                 "Please just go on and signin";
         }
 
         else if (response_object.error_message == 'Username already taken'){
-            return document.getElementById('error').innerHTML =
+            return document.getElementById('message').innerHTML =
                 'Username already taken';
         }
 
         else if (response_object.status == 'success'){
-            return document.getElementById('error').innerHTML =
+            return document.getElementById('message').innerHTML =
                 'Your account has been created successfully';
         }
         
