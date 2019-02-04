@@ -52,6 +52,7 @@ function login(e) {
             window.location.assign(
                 "admin_dashboard.html"  
                 ); //adminstrator dashbord using ghpages
+            return document.getElementById(error).innerHTML='Welcome dear adminstrator'
         }
         else if (response_object.logged_in_as != 'nicholas'){
             token = response_object.access_token;
@@ -59,6 +60,7 @@ function login(e) {
             window.location.assign(
                 "active.html"
                 ); //user feed ghpages
+            return document.getElementById(error).innerHTML='Welcome dear concerned citizen'
         }
 
     })
