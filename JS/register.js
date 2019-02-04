@@ -1,4 +1,4 @@
-document.getElementById('signin').addEventListener('submit',signup);
+document.getElementById('signup-form').addEventListener('submit',signup);
 
 function signup(e){
     e.preventDefault();
