@@ -30,7 +30,7 @@ function signup(e) {
     .then (response_object => {
         if (user_password != password2){
             return document.getElementById('message').innerHTML = (
-                "Passwords dont match"
+                "Passwords dont match 😢 "
             );
         }
         else if (response_object.error_message == 'some fields are missing'){
