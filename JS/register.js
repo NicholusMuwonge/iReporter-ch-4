@@ -34,45 +34,38 @@ function signup(e) {
             );
         }
         else if (response_object.error_message == 'some fields are missing'){
-            return document.getElementById('error').innerHTML = (
-                'some fields are missing'
-                );
+            return document.getElementById('error').innerHTML =
+                'some fields are missing';
         }
         else if (response_object.error_message == 'Password is wrong. It should be at-least 5 characters long, and alphanumeric.'){
-            return document.getElementById('error').innerHTML = (
-                "Password is wrong. It should be at-least 5 characters long, and alphanumeric."
-                );
+            return document.getElementById('error').innerHTML =
+                "Password is wrong. It should be at-least 5 characters long, and alphanumeric.";
         }
         
         else if (response_object.error_message == "User email {0} is wrong, \
         It should be in the format (xxxxx@xxxx.xxx).format(email)"){
-            return document.getElementById('error').innerHTML = (
-                "Improper email format"
-                );
+            return document.getElementById('error').innerHTML =
+                "Improper email format";
         }
         else if (response_object.error_message == "A name should consist of \
         only alphabetic characters"){
-            return document.getElementById('error').innerHTML = (
-                "write your name only in alphabet"
-                );
+            return document.getElementById('error').innerHTML =
+                "write your name only in alphabet";
         }
 
         else if (response_object.error_message == 'email already exists'){
-            return document.getElementById('error').innerHTML = (
-                "Please just go on and signin"
-                );
+            return document.getElementById('error').innerHTML =
+                "Please just go on and signin";
         }
 
         else if (response_object.error_message == 'Username already taken'){
-            return document.getElementById('error').innerHTML = (
-                'Username already taken'
-                );
+            return document.getElementById('error').innerHTML =
+                'Username already taken';
         }
 
         else if (response_object.status == 'success'){
-            return document.getElementById('error').innerHTML = (
-                'Your account has been created successfully'
-                );
+            return document.getElementById('error').innerHTML =
+                'Your account has been created successfully';
         }
         
     })
