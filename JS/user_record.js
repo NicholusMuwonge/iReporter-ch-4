@@ -1,5 +1,5 @@
 // This is where I attach the index html template to the backend
-post_client = new api();
+const post_client = new api();
 document.getElementById('post-record').addEventListener('submit', post_record);
 function post_record(e) {
     e.preventDefault();
