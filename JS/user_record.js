@@ -42,7 +42,7 @@ function post_record(e) {
         else if(response_object.message == "Successfully posted a new record"){
             token = response_object.access_token;
             localStorage.setItem('access_token',token);
-            return document.getElementById('message').innerHTML = "Hooray !! record reported 🎆 🎇 ";
+            return document.getElementById('message').innerHTML = "Hooray !! claim received 🎆 🎇 ";
             }
     })
 
