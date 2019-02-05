@@ -34,7 +34,6 @@ function post_record(e) {
 
     fetch(access_token,route,options)
     .then (res => res.json())
-
     .then (response_object => {
         console.log(response_object)
         if (response_object.error_message == "some fields are missing"){
@@ -55,5 +54,4 @@ function post_record(e) {
     })
 
     .catch(error => console.log(error));
-    
 }
