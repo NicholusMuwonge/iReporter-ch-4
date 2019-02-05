@@ -55,6 +55,5 @@ function post_record(e) {
     })
 
     .catch(error => console.log(error));
-    }
     
 }
