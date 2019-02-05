@@ -1,5 +1,5 @@
 // This is where I attach the index html template to the backend
-post_client = new api()
+post_client = new api();
 document.getElementById('post-record').addEventListener('submit', post_record);
 function post_record(e) {
     e.preventDefault();
@@ -27,7 +27,7 @@ function post_record(e) {
         cache : 'reload'
                     }
     
-    access_token = localStorage.getItem('token');
+    access_token = localStorage.getItem('access_token');
     if (access_token) {
         post_client.post(route,options,access_token)
         // fetch(route,options,access_token)
