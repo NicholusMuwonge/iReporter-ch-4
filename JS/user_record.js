@@ -35,11 +35,13 @@ function post_record(e) {
         are missing 😠";
         }
 
-        // else if ((keys.body.length) < 20 ){
-        //     return document.getElementById('message').innerHTML = 'write atleast \
-        //     20 characters ✍️ ';
-        // }
+        else if ((keys.body.length) < 20 ){
+            return document.getElementById('message').innerHTML = 'write atleast \
+            20 characters ✍️ ';
+        }
         else if(response_object.message == "Successfully posted a new record"){
+            token = response_object.access_token;
+            localStorage.setItem('access_token',token);
             return document.getElementById('message').innerHTML = "Hooray !! record reported 🎆 🎇 ";
             }
     })
