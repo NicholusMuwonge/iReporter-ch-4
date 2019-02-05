@@ -35,10 +35,10 @@ function post_record(e) {
         are missing 😠";
         }
 
-        else if (length(keys.body) < 20 ){
-            return document.getElementById('message').innerHTML = 'write atleast \
-            20 characters ✍️ ';
-        }
+        // else if ((keys.body.length) < 20 ){
+        //     return document.getElementById('message').innerHTML = 'write atleast \
+        //     20 characters ✍️ ';
+        // }
         else if(response_object.message == "Successfully posted a new record"){
             return document.getElementById('message').innerHTML = "Hooray !! record reported 🎆 🎇 ";
             }
