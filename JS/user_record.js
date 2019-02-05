@@ -32,7 +32,7 @@ function post_record(e) {
     
     
 
-    fetch(access_token,route,options)
+    fetch(route,options)
     .then (res => res.json())
     .then (response_object => {
         console.log(response_object)
