@@ -4,7 +4,7 @@ function post_record(e) {
     e.preventDefault();
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
     let record_title = document.getElementById('title').value; 
-    let record_type = document.getElementById('claim-type').value;
+    let record_type = document.getElementById('Claim-type').value;
     let record_geolocation = document.getElementById('geo').value;
     let body = document.getElementById('body').value;
 
