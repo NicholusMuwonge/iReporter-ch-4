@@ -1,6 +1,7 @@
-// This is where I attach the index html template to the backend
-const post_client = new Api();
+// post user
+
 document.getElementById('post-record').addEventListener('submit', post_record);
+
 function post_record(e) {
     e.preventDefault();
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
@@ -15,6 +16,7 @@ function post_record(e) {
         record_geolocation : record_geolocation,
         body : body
     }
+    access_token = localStorage.getItem('access_token');
 
     const options = {
         method : 'POST',
@@ -22,15 +24,16 @@ function post_record(e) {
         mode : 'cors',
         headers : {
             'Accept' : 'application/json',
-            'content-type' : 'application/json'
+            'content-type' : 'application/json',
+            'Authorization': `Bearer ${access_token}`
         },
         cache : 'reload'
                     }
     
-    access_token = localStorage.getItem('access_token');
+    
     if (access_token) {
-        post_client.post(route,options,access_token)
-        // fetch(route,options,access_token)
+        // post_client.post(route,options,access_token)
+        fetch(route,options,access_token)
         .then (res => res.json())
         .then (response_object => {
             
