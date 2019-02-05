@@ -25,26 +25,27 @@ function post_record(e) {
         },
         cache : 'reload'
                     }
-
-    fetch(route,options)
-    .then (res => res.json())
-    .then (response_object => {
-        
-        if (response_object.error_message == "some fields are missing"){
-        return document.getElementById('message').innerHTML = "some fields \
-        are missing 😠";
-        }
-
-        else if ((keys.body.length) < 20 ){
-            return document.getElementById('message').innerHTML = 'write atleast \
-            20 characters ✍️ ';
-        }
-        else if(response_object.message == "Successfully posted a new record"){
-            token = response_object.access_token;
-            localStorage.setItem('access_token',token);
-            return document.getElementById('message').innerHTML = "Hooray !! claim received 🎆 🎇 ";
+    access_token = localStorage.getItem('access_token');
+    if (access_token) {
+        fetch(route,options,access_token)
+        .then (res => res.json())
+        .then (response_object => {
+            
+            if (response_object.error_message == "some fields are missing"){
+            return document.getElementById('message').innerHTML = "some fields \
+            are missing 😠";
             }
-    })
 
-    .catch(error => console.log(error));
+            else if ((keys.body.length) < 20 ){
+                return document.getElementById('message').innerHTML = 'write atleast \
+                20 characters ✍️ ';
+            }
+            else if(response_object.message == "Successfully posted a new record"){
+                return document.getElementById('message').innerHTML = "Hooray !! claim received 🎆 🎇 ";
+                }
+        })
+
+        .catch(error => console.log(error));
+        }
+    return document.getElementById('message').innerHTML = "token is expired. Login again";
 }
