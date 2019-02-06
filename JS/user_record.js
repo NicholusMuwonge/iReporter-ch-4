@@ -30,7 +30,7 @@ function post_record(e) {
         cache : 'reload'
                     }
     
-    if (access_token == "null" ){
+    if (access_token === null ){
         window.location.assign(
             "index.html"
             );
