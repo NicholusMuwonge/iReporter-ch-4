@@ -1,4 +1,4 @@
-// post both redflag and intervention
+// post both redflag and interventions
 
 document.getElementById('post-record').addEventListener('submit', post_record);
 
