@@ -49,6 +49,11 @@ function post_record(e) {
             return document.getElementById('message').innerHTML = "Hooray !! claim received 🎆 🎇 ";
             }
         else{
+
+            
+            window.location.assign(
+                "index.html"
+                );
             return document.getElementById('message').innerHTML = "token is expired. Login again";
         }
     })
