@@ -34,7 +34,7 @@ function post_record(e) {
         window.location.assign(
             "index.html"
             );
-        return document.getElementById('message').innerHTML = "Login first ⛔🚫";
+        alert ("Login first ⛔🚫")
 
     }
 
