@@ -58,6 +58,11 @@ function post_record(e) {
             return document.getElementById('message').innerHTML = "Hooray !! claim received 🎆 🎇 ";
             
             }
+        else if(response_object.status == 400){
+            window.location.replace(
+                "index.html"
+                );
+            }
         else{
 
             
