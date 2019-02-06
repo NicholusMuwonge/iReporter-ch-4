@@ -30,7 +30,13 @@ function post_record(e) {
         cache : 'reload'
                     }
     
-    
+    if (access_token == "null" ){
+        window.location.assign(
+            "index.html"
+            );
+        return document.getElementById('message').innerHTML = "Login first ⛔🚫";
+
+    }
 
     fetch(route,options)
     .then (res => res.json())
@@ -46,7 +52,12 @@ function post_record(e) {
             20 characters ✍️ ';
         }
         else if(response_object.message == "Successfully posted a new record"){
+            window.location.replace(
+                "active.html"
+                );
+
             return document.getElementById('message').innerHTML = "Hooray !! claim received 🎆 🎇 ";
+            
             }
         else{
 
