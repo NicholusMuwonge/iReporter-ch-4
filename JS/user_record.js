@@ -36,7 +36,7 @@ function post_record(e) {
     .then (res => res.json())
     .then (response_object => {
         console.log(response_object)
-        if (response_object.error_message == "some fields are missing"){
+        if (response_object.error_message == "Some fields have no data"){
         return document.getElementById('message').innerHTML = "some fields \
         are missing 😠";
         }
