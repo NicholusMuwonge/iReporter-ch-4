@@ -53,7 +53,7 @@ function post_record(e) {
         }
         else if(response_object.message == "Successfully posted a new record"){
             window.location.replace(
-                "index.html"
+                "active.html"
                 );
 
             return document.getElementById('message').innerHTML = "Hooray !! claim received 🎆 🎇 ";
