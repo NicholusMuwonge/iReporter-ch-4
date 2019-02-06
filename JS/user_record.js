@@ -16,9 +16,7 @@ function post_record(e) {
         record_geolocation : record_geolocation,
         body : body
     }
-    access_token = localStorage.getItem('access_token');
-    console.log(access_token)
-
+    access_token = sessionStorage.getItem('access_token');
     const options = {
         method : 'POST',
         body : JSON.stringify(keys),
@@ -32,10 +30,10 @@ function post_record(e) {
                     }
     
     if (access_token === null ){
-        window.location.assign(
+        alert ("Login first ⛔🚫");
+        window.location.replace(
             "index.html"
             );
-        alert ("Login first ⛔🚫")
 
     }
 
