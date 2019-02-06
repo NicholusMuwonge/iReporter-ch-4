@@ -4,13 +4,6 @@ document.getElementById('post-record').addEventListener('submit', post_record);
 
 function post_record(e) {
     e.preventDefault();
-    if (access_token === null ){
-        alert ("Login first ⛔🚫");
-        window.location.replace(
-            "index.html"
-            );
-
-    }
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
     let record_title = document.getElementById('title').value; 
     let record_type = document.getElementById('Claim-type').value;
@@ -35,6 +28,14 @@ function post_record(e) {
         },
         cache : 'reload'
                     }
+    
+    if (access_token === null ){
+        alert ("Login first ⛔🚫");
+        window.location.replace(
+            "index.html"
+            );
+
+    }
 
     fetch(route,options)
     .then (res => res.json())
