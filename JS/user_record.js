@@ -17,6 +17,7 @@ function post_record(e) {
         body : body
     }
     access_token = localStorage.getItem('access_token');
+    console.log(access_token)
 
     const options = {
         method : 'POST',
