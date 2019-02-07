@@ -99,7 +99,7 @@ function get_records() {
             //     "user_record.html"
             //     );
         }
-
+        console.log(response_object.element)
     })
     .catch(error => console.log(error));
 
