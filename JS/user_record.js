@@ -1,4 +1,4 @@
-// post user
+// post both redflag and interventions
 
 document.getElementById('post-record').addEventListener('submit', post_record);
 
@@ -57,6 +57,11 @@ function post_record(e) {
 
             return document.getElementById('message').innerHTML = "Hooray !! claim received 🎆 🎇 ";
             
+            }
+        else if(response_object.status == 400){
+            window.location.replace(
+                "index.html"
+                );
             }
         else{
 
