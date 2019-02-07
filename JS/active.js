@@ -87,7 +87,7 @@ function get_records() {
             document.getElementById('template').innerHTML= output;};    
         }
         
-        else if (response_object.status == 401){
+        else if (response_object.status == 401 || response_object.status == 422){
             alert('un-authorised access, please login ')
             window.location.assign(
                 "index.html"
@@ -95,9 +95,9 @@ function get_records() {
         }
         else {
             alert ('no reports at the moment, Please create one ')
-            window.location.assign(
-                "user_record.html"
-                );
+            // window.location.assign(
+            //     "user_record.html"
+            //     );
         }
 
     })
