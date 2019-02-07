@@ -1,7 +1,5 @@
 // fetching all records created
 document.getElementById('submit-button').addEventListener('submit',get_records);
-onload
-
 function get_records(e) {
     e.preventDefault();
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
