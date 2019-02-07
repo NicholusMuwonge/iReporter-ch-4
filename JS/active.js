@@ -15,12 +15,12 @@ function get_records() {
         },
         cache : 'reload'
                     }
-    if (access_token === null ){
-        alert ("Login first ⛔🚫");
-        window.location.replace(
-            "index.html"
-            );
-        }
+    // if (access_token === null ){
+    //     alert ("Login first ⛔🚫");
+    //     window.location.replace(
+    //         "index.html"
+    //         );
+    //     }
 
     fetch(route,options)
     .then (res => res.json())
