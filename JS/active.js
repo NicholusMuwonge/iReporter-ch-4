@@ -1,8 +1,8 @@
 // fetching all records created
-document.getElementById('submit-button').addEventListener('submit',get_records);
+document.getElementById('submit-button').addEventListener('submit',get_records());
 document.getElementById('template').onload;
-function get_records(e) {
-    e.preventDefault();
+function get_records() {
+    // e.preventDefault();
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
     access_token = sessionStorage.getItem('access_token');
     const options = {
