@@ -7,7 +7,6 @@ function get_records() {
     access_token = sessionStorage.getItem('access_token');
     const options = {
         method : 'GET',
-        body : JSON.stringify(keys),
         mode : 'cors',
         headers : {
             'Accept' : 'application/json',
