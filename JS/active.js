@@ -4,13 +4,12 @@ document.getElementById('template').onload;
 function get_records() {
     // e.preventDefault();
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
-    access_token = sessionStorage.getItem('access_token');
+    access_token = localStorage.getItem('access_token');
     const options = {
         method : 'GET',
         mode : 'cors',
         headers : {
-            'Accept' : 'application/json',
-            'content-type' : 'application/json',
+            
             'Authorization': `Bearer ${access_token}`
         },
         cache : 'reload'
