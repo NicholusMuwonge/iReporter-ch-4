@@ -1,5 +1,6 @@
 // fetching all records created
 document.getElementById('submit-button').addEventListener('submit',get_records);
+document.getElementById('template').onload;
 function get_records(e) {
     e.preventDefault();
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
@@ -27,35 +28,35 @@ function get_records(e) {
     .then (response_object => {
         console.log(response_object)
         if (response_object.status == 200){
-            let tile = document.getElementById('template'); 
-            tile.innerHTML = 
-            `<div class="four" id = "template" onload = "get_records()">
-                <div class="four">
-                    <form style="background-image:url('images/paper.jpg')" >
-                              <div class="five">
+            // let tile = document.getElementById('template'); 
+            // tile.innerHTML = 
+            // `<div class="four" id = "template" onload = "get_records()">
+            //     <div class="four">
+            //         <form style="background-image:url('images/paper.jpg')" >
+            //                   <div class="five">
                                 
-                                <img id="w" src="images/avatar1.png" alt="avatar"  >
-                                <h2 id="user_id"></h2><h1 id = "record_date"></h1><br><br>
-                                <p2 id = "body"></p2>
-                                <br><br><br><br>
+            //                     <img id="w" src="images/avatar1.png" alt="avatar"  >
+            //                     <h2 id="user_id"></h2><h1 id = "record_date"></h1><br><br>
+            //                     <p2 id = "body"></p2>
+            //                     <br><br><br><br>
         
-                                <ul class='first'>
-                                <h3 id = "inside-bar">
-                                    <li id="record_type"> </a></li>
-                                    <li id ="status"> </li>
-                                    <li id = "record_geolocation" ></li>
-                                    <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
-                                    <!-- <input type="text" placeholder="Search.." name="Edit" id= "update"> -->
-                                </h3>
-                                </ul>
+            //                     <ul class='first'>
+            //                     <h3 id = "inside-bar">
+            //                         <li id="record_type"> </a></li>
+            //                         <li id ="status"> </li>
+            //                         <li id = "record_geolocation" ></li>
+            //                         <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
+            //                         <!-- <input type="text" placeholder="Search.." name="Edit" id= "update"> -->
+            //                     </h3>
+            //                     </ul>
                                 
-                                <div >
-                                    <button class="e" ><a  >Edit</a></button>
-                                </div>
-                            </form>
-                              </div>
-                        </form>
-            </div> `
+            //                     <div >
+            //                         <button class="e" ><a  >Edit</a></button>
+            //                     </div>
+            //                 </form>
+            //                   </div>
+            //             </form>
+            // </div> `
         for (let element in response_object){
             output +=
             `<div class="four" id = "template" onload = "get_records()" >
