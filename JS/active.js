@@ -27,6 +27,7 @@ function get_records(e) {
     fetch(route,options)
     .then (res => res.json())
     .then (response_object => {
+        console.log(response_object)
         if (response_object.status == 200){
             let tile = document.getElementById('template'); 
             tile.innerHTML = 
@@ -108,5 +109,6 @@ function get_records(e) {
         }
 
     })
+    .catch(error => console.log(error));
 
 }
