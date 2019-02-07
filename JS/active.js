@@ -25,34 +25,7 @@ function get_records() {
     .then (res => res.json())
     .then (response_object => {
         if (response_object.status == 200){
-            // let tile = document.getElementById('template'); 
-            // tile.innerHTML += 
-            // `<div class="four" id = "template" onload = "get_records()">
-            //     <div class="four">
-            //         <form style="background-image:url('images/paper.jpg')" >
-            //                   <div class="five">
-                                
-            //                     <img id="w" src="images/avatar1.png" alt="avatar"  >
-            //                     <h2 id="user_id"></h2><h1 id = "record_date"></h1><br><br>
-            //                     <p2 id = "body"></p2>
-            //                     <br><br><br><br>
-            //                     <ul class='first'>
-            //                     <h3 id = "inside-bar">
-            //                         <li id="record_type"> </a></li>
-            //                         <li id ="status"> </li>
-            //                         <li id = "record_geolocation" ></li>
-            //                         <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
-            //                         <!-- <input type="text" placeholder="Search.." name="Edit" id= "update"> -->
-            //                     </h3>
-            //                     </ul>
-                                
-            //                     <div >
-            //                         <button class="e" ><a  >Edit</a></button>
-            //                     </div>
-            //                 </form>
-            //                   </div>
-            //             </form>
-            //     </div> `
+            let output =`<div class="four" id = "template" onload = "get_records()"></div>`
             for(var element=0; element < response_object.length; element++){
                 output += `
                     <form style="background-image:url('images/paper.jpg')" >
@@ -75,8 +48,7 @@ function get_records() {
                                 <div >
                                     <button class="e" ><a  >Edit</a></button>
                                 </div>
-                            </form>
-                              </div>
+                            
                         </form>
             </div> `;
             
