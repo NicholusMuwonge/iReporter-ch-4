@@ -6,7 +6,7 @@
     <title>User dashboard|iReporter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/activity.css" />
-    
+    <script src="./JS/active.js"></script>
 </head>
 <body style="background-image:url('images/wood.jpeg');">
     
@@ -18,7 +18,7 @@
                 <li id="three"><a href="index.html">Logout</a></li>
                 <h>
                     <input type="text" placeholder="Search.." name="search" id= "search-area">
-                    <button type="submit" id= "submit-button" ><i class="fa fa-search">S👀RCH</i></button>
+                    <button type="submit" id= "submit-button" onload="get_records()" >S👀RCH</button>
                 </h>
                 
                 <!-- <h>HISTORY</h> -->
