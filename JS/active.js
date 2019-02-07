@@ -87,12 +87,9 @@ function get_records(e) {
                         </form>
             </div> `;
             console.log(output);
-            document.getElementById('template').innerHTML= output;
-
-        };    
-            
-
+            document.getElementById('template').innerHTML= output;};    
         }
+        
         else if (response_object.status == 401){
             alert('un-authorised access, please login ')
             window.location.assign(
