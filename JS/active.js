@@ -96,7 +96,7 @@ function get_records() {
             //     "user_record.html"
             //     );
         }
-        console.log(response_object)
+        
     })
     .catch(error => console.log(error));
 
