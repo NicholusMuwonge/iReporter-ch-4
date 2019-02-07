@@ -28,29 +28,26 @@ function get_records() {
             let output =`<div id = "add_in" ></div>`
             for(var element=0; element < response_object.length; element++){
                 output += `
-                    <form style="background-image:url('images/paper.jpg')" >
-                              <div class="five">
-                                <img id="w" src="images/avatar1.png" alt="avatar"  >
-                                <h2 id="user_id">${response_object[element]['user id']}</h2><h1 id = "record_date">${response_object[element]['record placement date']}</h1><br><br>
-                                <p2 id = "body">${response_object[element].body}</p2>
-                                <br><br><br><br>
-                                <ul class='first'>
-                                <h3 id = "inside-bar">
-                                    <li id="record_type">${response_object[element]['Record type']}</li>
-                                    <li id ="status">${response_object[element].Status}</li>
-                                    <li id = "record_geolocation" >${response_object[element]['Record geolocation']}</li>
-                                    <li id = "record_no" >${response_object[element]['Record no']}</li>
-                                    <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
-                                    
-                                </h3>
-                                </ul>
+                            <h2 id="user_id">${response_object[element]['user id']}</h2>
+                            <h1 id = "record_date">${response_object[element]['record placement date']}</h1><br><br>
+                            <p2 id = "body">${response_object[element].body}</p2>
+                            <br><br><br><br>
+                            <ul class='first'>
+                            <h3 id = "inside-bar">
+                                <li id="record_type">${response_object[element]['Record type']}</li>
+                                <li id ="status">${response_object[element].Status}</li>
+                                <li id = "record_geolocation" >${response_object[element]['Record geolocation']}</li>
+                                <li id = "record_no" >${response_object[element]['Record no']}</li>
+                                <li id="Edit"> 
+                                <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." >
+                                </li>
                                 
-                                <div >
-                                    <button class="e" ><a  >Edit</a></button>
-                                </div>
+                            </h3>
+                            </ul>
                             
-                        </form>
-            </div> `;
+                            <div >
+                                <button class="e" ><a  >Edit</a></button>
+                            </div>`;
             
             console.log(output);
             document.getElementById('fillout').innerHTML= output;};    
