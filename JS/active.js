@@ -25,21 +25,21 @@ function get_records() {
     .then (res => res.json())
     .then (response_object => {
         console.log(response_object)
-        if (response_object.status === 200){
+        if (response_object.msg == 'Successfully got all record  records'){
             let output =`<div id = "add_in" ></div>`
-            for(var n=0; n < response_object.length; n++){
+            for(n in response_object.data){
                 console.log(response_object[n].data);
                 output += `
-                            <h2 id="user_id">${response_object[n]['user id']}</h2>
-                            <h1 id = "record_date">${response_object[n]['record placement date']}</h1><br><br>
-                            <p2 id = "body">${response_object[n].body}</p2>
+                            <h2 id="user_id">${response_object.data[n]['user_name']}</h2>
+                            <h1 id = "record_date">${response_object.data[n]['record_placement_date']}</h1><br><br>
+                            <p2 id = "body">${response_object.data[n].body}</p2>
                             <br><br><br><br>
                             <ul class='first'>
                             <h3 id = "inside-bar">
-                                <li id="record_type">${response_object[n]['Record type']}</li>
-                                <li id ="status">${response_object[n].Status}</li>
-                                <li id = "record_geolocation" >${response_object[n]['Record geolocation']}</li>
-                                <li id = "record_no" >${response_object[n]['Record no']}</li>
+                                <li id="record_type">${response_object.data[n]['record_type']}</li>
+                                <li id ="status">${response_object.data[n].status}</li>
+                                <li id = "record_geolocation" >${response_object.data[n]['record_geolocation']}</li>
+                                <li id = "record_no" >${response_object.data[n]['record_no']}</li>
                                 <li id="Edit"> 
                                 <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." >
                                 </li>
@@ -56,10 +56,10 @@ function get_records() {
         }
         
         else if (response_object.status === 401 || response_object.status === 422){
-            alert('un-authorised access, please login ')
-            // window.location.replace(
-            //     "index.html"
-            //     );
+            alert('un-authorised access / token is expired, please login ')
+            window.location.replace(
+                "index.html"
+                );
         }
         else if (response_object.status === 404){
             alert ('no reports at the moment, Please create one ')

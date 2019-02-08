@@ -30,7 +30,7 @@ function post_record(e) {
                     }
     
     if (access_token === null ){
-        alert ("Login first ⛔🚫");
+        // alert ("Login first ⛔🚫");
         window.location.replace(
             "index.html"
             );
