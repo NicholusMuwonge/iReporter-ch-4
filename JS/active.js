@@ -4,7 +4,7 @@ document.getElementById('fillout').onload;
 function get_records() {
     // e.preventDefault();
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
-    access_token = sessionStorage.getItem('access_token');
+    access_token = localStorage.getItem('access_token');
     const options = {
         method : 'GET',
         mode : 'cors',
@@ -57,9 +57,9 @@ function get_records() {
         
         else if (response_object.status === 401 || response_object.status === 422){
             alert('un-authorised access, please login ')
-            window.location.replace(
-                "index.html"
-                );
+            // window.location.replace(
+            //     "index.html"
+            //     );
         }
         else if (response_object.status === 404){
             alert ('no reports at the moment, Please create one ')
