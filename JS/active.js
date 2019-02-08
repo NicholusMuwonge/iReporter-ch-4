@@ -44,18 +44,17 @@ function get_records() {
             
                                     <ul class='first'>
                                     <h3 id = "inside-bar">
-                                        <!-- <li id="del"> 🚮 </li> -->
                                         <li id="record_type">${response_object.data[n]['record_type']}</li>
                                         <li id ="status">${response_object.data[n].status}</li>
                                         <li id = "record_geolocation" >${response_object.data[n]['record_geolocation']}</li>
                                         <li id = "record_no" >${response_object.data[n]['record_no']}</li>
                                         <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
-                                        <!-- <input type="text" placeholder="Search.." name="Edit" id= "update"> -->
                                     </h3>
                                     </ul>
                                     
                                     <div >
                                         <button class="e" ><a  >Edit</a></button>
+                                        <li id="del"> 🚮 </li>
                                     </div>
                                 
                             </form>
@@ -66,13 +65,13 @@ function get_records() {
             document.getElementById('fillin').innerHTML= output;};    
         }
         
-        else if (response_object.statusCode === 401 || response_object.status === 422){
-            alert('un-authorised access / token is expired, please login ')
+        else if (statusCode === 401 ){
+
             window.location.replace(
                 "index.html"
                 );
         }
-        else if (response_object.statusCode === 404){
+        else if (statusCode === 404){
             alert ('no reports at the moment, Please create one ')
             // window.location.assign(
             //     "user_record.html"
