@@ -16,7 +16,7 @@ function post_record(e) {
         record_geolocation : record_geolocation,
         body : body
     }
-    access_token = sessionStorage.getItem('access_token');
+    access_token = localStorage.getItem('access_token');
     const options = {
         method : 'POST',
         body : JSON.stringify(keys),
