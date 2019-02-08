@@ -28,7 +28,7 @@ function get_records() {
         if (response_object.msg == 'Successfully got all record  records'){
             let output =`<div id = "add_in" ></div>`
             for(n in response_object.data){
-                console.log(response_object[n].data);
+                console.log(response_object.data[n]);
                 output += `
                             <h2 id="user_id">${response_object.data[n]['user_name']}</h2>
                             <h1 id = "record_date">${response_object.data[n]['record_placement_date']}</h1><br><br>
