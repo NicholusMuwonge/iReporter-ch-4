@@ -1,4 +1,4 @@
-// fetching all records created
+// fetching all records created, they will load by default on loading the page
 document.getElementById('submit-button').addEventListener('submit',get_records());
 // document.getElementById('body').onload;
 // document.getElementById('fillin').onload;
@@ -77,6 +77,14 @@ function get_records() {
             // window.location.assign(
             //     "user_record.html"
             //     );
+        }
+        else{
+
+            
+            window.location.replace(
+                "index.html"
+                );
+            
         }
         
         
