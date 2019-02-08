@@ -27,6 +27,7 @@ function get_records() {
         if (response_object.status === 200){
             let output =`<div id = "add_in" ></div>`
             for(var n=0; n < response_object.length; n++){
+                console.log(response_object[n].data);
                 output += `
                             <h2 id="user_id">${response_object[n]['user id']}</h2>
                             <h1 id = "record_date">${response_object[n]['record placement date']}</h1><br><br>
@@ -59,12 +60,13 @@ function get_records() {
                 "index.html"
                 );
         }
-        else {
+        else if (response_object.status === 404){
             alert ('no reports at the moment, Please create one ')
             // window.location.assign(
             //     "user_record.html"
             //     );
         }
+        
         
     })
     .catch(error => console.log(error));
