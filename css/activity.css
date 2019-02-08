@@ -68,6 +68,7 @@ header
     list-style: none;
     background-color: #333;
     
+    
 }
 
 .first a
@@ -225,9 +226,9 @@ h3{
     font-size: 17px;
     border: none;
 }
-#body {
+/* #body {
     margin-top: 10%;
-}
+} */
 
 h
 {
