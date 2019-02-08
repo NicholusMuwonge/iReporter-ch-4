@@ -30,7 +30,7 @@ function get_records() {
             let output =``
             for(n in response_object.data){
                 console.log(response_object.data[n]);
-                output += `
+                output += `<br><br>
                 <div class="four" id = "template">
                 <div class="four">
                         <form style="background-image:url('images/paper.jpg')" >
@@ -58,7 +58,7 @@ function get_records() {
                                     </div>
                                 
                             </form>
-                        </div>
+                        </div><br><br>
                             `;
             
             console.log(output);
