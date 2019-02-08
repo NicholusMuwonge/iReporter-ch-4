@@ -15,7 +15,7 @@ function get_records() {
         cache : 'no-cache'
                     }
     if (access_token === null ){
-        alert ("Login first ⛔🚫");
+        // alert ("Login first ⛔🚫");
         window.location.replace(
             "index.html"
             );
@@ -55,7 +55,7 @@ function get_records() {
         
         else if (response_object.status === 401 || response_object.status === 422){
             alert('un-authorised access, please login ')
-            window.location.assign(
+            window.location.replace(
                 "index.html"
                 );
         }
