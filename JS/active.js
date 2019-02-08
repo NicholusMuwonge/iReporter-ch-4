@@ -31,7 +31,7 @@ function get_records() {
             for(n in response_object.data){
                 console.log(response_object.data[n]);
                 output += `
-                <div class="four" id = "template" onload="get_records()>
+                <div class="four" id = "template">
                 <div class="four">
                         <form style="background-image:url('images/paper.jpg')" >
                                   <div class="five">
