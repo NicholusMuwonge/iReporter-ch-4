@@ -26,18 +26,18 @@ function get_records() {
     .then (response_object => {
         if (response_object.status === 200){
             let output =`<div id = "add_in" ></div>`
-            for(var element=0; element < response_object.length; element++){
+            for(var n=0; n < response_object.length; n++){
                 output += `
-                            <h2 id="user_id">${response_object[element]['user id']}</h2>
-                            <h1 id = "record_date">${response_object[element]['record placement date']}</h1><br><br>
-                            <p2 id = "body">${response_object[element].body}</p2>
+                            <h2 id="user_id">${response_object[n]['user id']}</h2>
+                            <h1 id = "record_date">${response_object[n]['record placement date']}</h1><br><br>
+                            <p2 id = "body">${response_object[n].body}</p2>
                             <br><br><br><br>
                             <ul class='first'>
                             <h3 id = "inside-bar">
-                                <li id="record_type">${response_object[element]['Record type']}</li>
-                                <li id ="status">${response_object[element].Status}</li>
-                                <li id = "record_geolocation" >${response_object[element]['Record geolocation']}</li>
-                                <li id = "record_no" >${response_object[element]['Record no']}</li>
+                                <li id="record_type">${response_object[n]['Record type']}</li>
+                                <li id ="status">${response_object[n].Status}</li>
+                                <li id = "record_geolocation" >${response_object[n]['Record geolocation']}</li>
+                                <li id = "record_no" >${response_object[n]['Record no']}</li>
                                 <li id="Edit"> 
                                 <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." >
                                 </li>
