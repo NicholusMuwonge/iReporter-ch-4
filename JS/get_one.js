@@ -28,12 +28,13 @@ function get_one_record() {
             "index.html"
             );
         }
-    if (Number.isInteger(search_value) == true){
+    if (Number.isInteger(search_value) === true){
         fetch(route,options)
         .then (res => res.json())
         .then (response_object => {
             console.log(response_object)
-            if (response_object.record_no == search_value){
+            // response_object.record_no == search_value
+            if (response_object.status === 200){
                 output = ``
                 for(n in response_object){
                     output += `
@@ -71,7 +72,7 @@ function get_one_record() {
                 };
 
             }
-            else if (response_object === null){
+            else if (response_object.status === 404){
                 output = ``
                 for(n in response_object){
                     output += `
@@ -120,6 +121,6 @@ function get_one_record() {
     }
 
    else {
-       alert ('try something else')
+       swal ('try something else')
         }
     }
