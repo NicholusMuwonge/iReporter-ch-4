@@ -62,7 +62,7 @@ function get_records() {
                             `;
             
             console.log(output);
-            document.getElementById('fillout').innerHTML= output;};    
+            document.getElementById('fillin').innerHTML= output;};    
         }
         
         else if (response_object.statusCode === 401 || response_object.status === 422){
