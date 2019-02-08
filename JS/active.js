@@ -1,6 +1,6 @@
 // fetching all records created
 document.getElementById('submit-button').addEventListener('submit',get_records());
-document.getElementById('fillin').onload;
+document.getElementById('body').onload;
 // window.onload= get_records();
 function get_records() {
     // e.preventDefault();
@@ -15,12 +15,12 @@ function get_records() {
         },
         cache : 'no-cache'
                     }
-    if (access_token === null ){
-        // alert ("Login first ⛔🚫");
-        window.location.replace(
-            "index.html"
-            );
-        }
+    // if (access_token === null ){
+    //     // alert ("Login first ⛔🚫");
+    //     window.location.replace(
+    //         "index.html"
+    //         );
+    //     }
 
     fetch(route,options)
     .then (res => res.json())
