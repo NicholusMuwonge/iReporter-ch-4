@@ -68,6 +68,7 @@ header
     list-style: none;
     background-color: #333;
     
+    
 }
 
 .first a
@@ -93,22 +94,37 @@ header
     position:unset;
     color: antiquewhite;
 }
-
-.e  {
+#del {
     cursor: pointer;
-    margin-top: -12%;
+    margin-top: -4%;
     width: 10%;
     margin-bottom: -12px;
     color:thistle;
-    border: 1px solid black;
-    height: 25px;
-    background-color:rgba(0, 0, 0, 0.801);
+    border: 1px solid rgba(189, 35, 35, 0.76);
+    height: 20px;
+    background-color:rgba(230, 121, 121, 0.459);
     padding: 3px;
     text-align: center;
     border-radius:7px;
     margin-left: 570px;
     text-decoration: none;
-    opacity: -100px;
+
+}
+.e  {
+    cursor: pointer;
+    margin-top: 5.3%;
+    width: 10%;
+    margin-bottom: -12px;
+    color:thistle;
+    border: 1px solid black;
+    height: 25px;
+    background-color:rgba(66, 65, 65, 0.459);
+    padding: 3px;
+    text-align: center;
+    border-radius:7px;
+    margin-left: 150px;
+    text-decoration: none;
+    /* opacity: -100px; */
 }
 
 #find{
@@ -225,9 +241,9 @@ h3{
     font-size: 17px;
     border: none;
 }
-#body {
+/* #body {
     margin-top: 10%;
-}
+} */
 
 h
 {
