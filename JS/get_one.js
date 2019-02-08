@@ -13,7 +13,7 @@ function get_one_record() {
     const options = {
         method : 'GET',
         mode : 'cors',
-        body : JSON.stringify(search_value),
+        // body : JSON.stringify(search_value),
         headers : {
             
             'Authorization': `Bearer ${access_token}`
