@@ -78,6 +78,14 @@ function get_records() {
             //     "user_record.html"
             //     );
         }
+        else{
+
+            
+            window.location.replace(
+                "index.html"
+                );
+            
+        }
         
         
     })
