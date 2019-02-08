@@ -1,6 +1,6 @@
 // fetching all records created
 document.getElementById('submit-button').addEventListener('submit',get_records());
-document.getElementById('fillout').onload;
+document.getElementById('template').onload;
 function get_records() {
     // e.preventDefault();
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
@@ -64,13 +64,13 @@ function get_records() {
             document.getElementById('fillout').innerHTML= output;};    
         }
         
-        else if (response_object.status === 401 || response_object.status === 422){
+        else if (response_object.statusCode === 401 || response_object.status === 422){
             alert('un-authorised access / token is expired, please login ')
             window.location.replace(
                 "index.html"
                 );
         }
-        else if (response_object.status === 404){
+        else if (response_object.statusCode === 404){
             alert ('no reports at the moment, Please create one ')
             // window.location.assign(
             //     "user_record.html"
