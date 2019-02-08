@@ -121,6 +121,6 @@ function get_one_record() {
     }
 
    else {
-       swal ('try something else')
+       alert('try something else')
         }
     }
