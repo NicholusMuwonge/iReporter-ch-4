@@ -1,7 +1,7 @@
 // fetching all records created
 document.getElementById('submit-button').addEventListener('submit',get_records());
-document.getElementById('body').onload;
-document.getElementById('fillin').onload;
+// document.getElementById('body').onload;
+// document.getElementById('fillin').onload;
 // window.onload= get_records();
 function get_records() {
     // e.preventDefault();
