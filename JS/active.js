@@ -4,7 +4,7 @@ document.getElementById('fillout').onload;
 function get_records() {
     // e.preventDefault();
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
-    access_token = localStorage.getItem('access_token');
+    access_token = sessionStorage.getItem('access_token');
     const options = {
         method : 'GET',
         mode : 'cors',
@@ -24,6 +24,7 @@ function get_records() {
     fetch(route,options)
     .then (res => res.json())
     .then (response_object => {
+        console.log(response_object)
         if (response_object.status === 200){
             let output =`<div id = "add_in" ></div>`
             for(var n=0; n < response_object.length; n++){
