@@ -26,30 +26,39 @@ function get_records() {
     .then (response_object => {
         console.log(response_object)
         if (response_object.msg == 'Successfully got all record  records'){
-            let output =`<div id = "add_in" ></div>`
+            let output =``
             for(n in response_object.data){
                 console.log(response_object.data[n]);
                 output += `
-                            <h2 id="user_id">${response_object.data[n]['user_name']}</h2>
-                            <h1 id = "record_date">${response_object.data[n]['record_placement_date']}</h1><br><br>
-                            <p2 id = "body">${response_object.data[n].body}</p2>
-                            <br><br><br><br>
-                            <ul class='first'>
-                            <h3 id = "inside-bar">
-                                <li id="record_type">${response_object.data[n]['record_type']}</li>
-                                <li id ="status">${response_object.data[n].status}</li>
-                                <li id = "record_geolocation" >${response_object.data[n]['record_geolocation']}</li>
-                                <li id = "record_no" >${response_object.data[n]['record_no']}</li>
-                                <li id="Edit"> 
-                                <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." >
-                                </li>
+                <div class="four" id = "template" onload="get_records()>
+                <div class="four">
+                        <form style="background-image:url('images/paper.jpg')" >
+                                  <div class="five">
+                                    <img id="w" src="images/avatar1.png" alt="avatar"  >
+                                    <h2 id="user_id">${response_object.data[n]['user_name']}</h2>
+                                    <h1 id = "record_date">${response_object.data[n]['record_placement_date']}</h1><br><br>
+                                    <p2 id = "body">${response_object.data[n].body}</p2>
+                                    <br><br><br><br>
+            
+                                    <ul class='first'>
+                                    <h3 id = "inside-bar">
+                                        <!-- <li id="del"> 🚮 </li> -->
+                                        <li id="record_type">${response_object.data[n]['record_type']}</li>
+                                        <li id ="status">${response_object.data[n].status}</li>
+                                        <li id = "record_geolocation" >${response_object.data[n]['record_geolocation']}</li>
+                                        <li id = "record_no" >${response_object.data[n]['record_no']}</li>
+                                        <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
+                                        <!-- <input type="text" placeholder="Search.." name="Edit" id= "update"> -->
+                                    </h3>
+                                    </ul>
+                                    
+                                    <div >
+                                        <button class="e" ><a  >Edit</a></button>
+                                    </div>
                                 
-                            </h3>
-                            </ul>
-                            
-                            <div >
-                                <button class="e" ><a  >Edit</a></button>
-                            </div>`;
+                            </form>
+                        </div>
+                            `;
             
             console.log(output);
             document.getElementById('fillout').innerHTML= output;};    
