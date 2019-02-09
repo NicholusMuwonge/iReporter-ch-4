@@ -6,9 +6,9 @@ function get_one_record() {
     // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     // var dateTime = date+' '+time;
 
-    let search_value = document.getElementById('search-area').value;
+    let record_no = document.getElementById('search-area').value;
     access_token = localStorage.getItem('access_token');
-    const route = 'https://databasetests.herokuapp.com/api/v2/auth/record/'+search_value+'/';
+    const route = 'https://databasetests.herokuapp.com/api/v2/auth/record/'+record_no+'/';
 
     const options = {
         method : 'GET',
@@ -34,7 +34,7 @@ function get_one_record() {
     .then (response_object => {
         console.log(response_object)
         // response_object.record_no == search_value
-        if (response_object.record_no == search_value){
+        if (response_object.record_no === record_no){
             output = ``
             for(n in response_object){
                 output += `
