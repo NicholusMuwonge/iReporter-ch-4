@@ -194,6 +194,13 @@ h3{
     margin-top: 10%;
     color: lightcoral;
 }
+#inside-bars {
+    margin-top: 8.5%;
+    color: lightcoral;
+    margin-left: -6%;
+    width:80%;
+    font-size: 85%;
+}
 #search-area {
     float: right;
     padding: 6px 10px;
