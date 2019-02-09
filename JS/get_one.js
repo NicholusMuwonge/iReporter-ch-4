@@ -8,7 +8,7 @@ function get_one_record() {
 
     let search_value = document.getElementById('search-area').value;
     access_token = localStorage.getItem('access_token');
-    const route = 'https://databasetests.herokuapp.com/api/v2/auth/record/'+record_no+'/';
+    const route = 'https://databasetests.herokuapp.com/api/v2/auth/record/'+search_value+'/';
 
     const options = {
         method : 'GET',
