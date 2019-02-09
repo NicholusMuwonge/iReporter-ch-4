@@ -43,8 +43,8 @@ function login(e) {
             have no data';
         }
         else if (response_object.message == 'User does not exist.'){
-            return document.getElementById('error').innerHTML = 'User does \
-            not exist.';
+            return document.getElementById('error').innerHTML = 'User credentials \
+            are Invalid.';
         }
         else if (response_object.logged_in_as == "nicholas"){
             token = response_object.access_token;
