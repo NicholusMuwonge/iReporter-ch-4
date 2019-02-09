@@ -71,7 +71,7 @@ function get_one_record() {
                     document.getElementById('fillin').innerHTML= output;
         }
 
-        else if(response_object.msg == "Token has expired") {
+        else if(msg == "Token has expired") {
             window.location.replace(
                 "index.html"
                 );
