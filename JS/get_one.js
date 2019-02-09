@@ -7,10 +7,8 @@ function get_one_record() {
 
 
     let record_no = document.getElementById('search-area').value;
-    // let redflag_search = document.getElementById('search-area').value;
     access_token = localStorage.getItem('access_token');
     const route = 'https://databasetests.herokuapp.com/api/v2/auth/record/'+record_no+'/';
-    const red_flag_route = 'https://databasetests.herokuapp.com/api/v2/redflags/';
 
     const options = {
         method : 'GET',
@@ -36,7 +34,6 @@ function get_one_record() {
     .then (res => res.json())
     .then (response_object => {
         console.log(response_object)
-        // response_object.record_no == search_value
         if (response_object){
             output = ``
             
