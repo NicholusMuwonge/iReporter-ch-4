@@ -34,44 +34,44 @@ function get_one_record() {
     .then (response_object => {
         console.log(response_object)
         // response_object.record_no == search_value
-        if (response_object === true){
+        if (response_object){
             output = ``
-            for(n in response_object){
-                output += `
-                <br><br>
-                <div class="four" id = "template">
-                <div class="four">
-                        <form style="background-image:url('images/paper.jpg')" >
-                                    <div class="five">
-                                    <img id="w" src="images/avatar1.png" alt="avatar"  >
-                                    <h2 id="user_id">${response_object[n]['user_name']}</h2>
-                                    <h1 id = "record_date">${response_object[n]['record_placement_date']}</h1><br><br>
-                                    <p2 id = "body">${response_object[n].body}</p2>
-                                    <br><br><br><br>
             
-                                    <ul class='first'>
-                                    <h3 id = "inside-bar">
-                                        <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
-                                        <li id="record_type">${response_object[n]['record_type']}</li>
-                                        <li id ="status">${response_object[n].status}</li>
-                                        <li id = "record_geolocation" >${response_object[n]['record_geolocation']}</li>
-                                        <li id = "record_no" >${response_object[n]['record_no']}</li>
-                                        
-                                    </h3>
-                                    </ul>
+            output += `
+            <br><br>
+            <div class="four" id = "template">
+            <div class="four">
+                    <form style="background-image:url('images/paper.jpg')" >
+                                <div class="five">
+                                <img id="w" src="images/avatar1.png" alt="avatar"  >
+                                <h2 id="user_id">${response_object['user_id']}</h2>
+                                <h1 id = "record_date">${response_object['record_placement_date']}</h1><br><br>
+                                <p2 id = "body">${response_object['body']}</p2>
+                                <br><br><br><br>
+        
+                                <ul class='first'>
+                                <h3 id = "inside-bar">
+                                    <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
+                                    <li id="record_type">${response_object['record_type']}</li>
+                                    <li id ="status">${response_object['status']}</li>
+                                    <li id = "record_geolocation" >${response_object['record_geolocation']}</li>
+                                    <li id = "record_no" >${response_object['record_no']}</li>
                                     
-                                    <div >
-                                        <button class="e" ><a  >Edit</a></button>
-                                        <li id="del"> 🚮 </li>
-                                    </div>
+                                </h3>
+                                </ul>
                                 
-                            </form>
-                        </div><br><br>`;
-                        console.log(output);
-                        document.getElementById('fillin').innerHTML= output;
-            };
-
+                                <div >
+                                    <button class="e" ><a  >Edit</a></button>
+                                    <li id="del"> 🚮 </li>
+                                </div>
+                            
+                        </form>
+                    </div><br><br>`;
+                    console.log(output);
+                    document.getElementById('fillin').innerHTML= output;
         }
+
+        
         else if (response_object === null){
             output = ``
             for(n in response_object){
@@ -110,47 +110,10 @@ function get_one_record() {
             };
         }
         else {
-            // alert ("Your token is expired \n\ please login again")
+            alert ("Your token is expired \n\ please login again")
             // window.location.replace(
             //     "index.html"
             //     );
-            
-            output = ``
-            for(n in response_object){
-                output += `
-                <br><br>
-                <div class="four" id = "template">
-                <div class="four">
-                        <form style="background-image:url('images/paper.jpg')" >
-                                    <div class="five">
-                                    <img id="w" src="images/avatar1.png" alt="avatar"  >
-                                    <h2 id="user_id">${response_object[n]['user_name']}</h2>
-                                    <h1 id = "record_date">${response_object[n]['record_placement_date']}</h1><br><br>
-                                    <p2 id = "body">${response_object[n].body}</p2>
-                                    <br><br><br><br>
-            
-                                    <ul class='first'>
-                                    <h3 id = "inside-bar">
-                                        <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
-                                        <li id="record_type">${response_object[n]['record_type']}</li>
-                                        <li id ="status">${response_object[n].status}</li>
-                                        <li id = "record_geolocation" >${response_object[n]['record_geolocation']}</li>
-                                        <li id = "record_no" >${response_object[n]['record_no']}</li>
-                                        
-                                    </h3>
-                                    </ul>
-                                    
-                                    <div >
-                                        <button class="e" ><a  >Edit</a></button>
-                                        <li id="del"> 🚮 </li>
-                                    </div>
-                                
-                            </form>
-                        </div><br><br>`;
-                        console.log(output);
-                        document.getElementById('fillin').innerHTML= output;
-            };
-
         }
     })
     .catch(error => console.log(error));
