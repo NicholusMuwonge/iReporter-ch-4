@@ -1,5 +1,5 @@
 // fetching all records created, they will load by default on loading the page
-document.getElementById('submit-button').addEventListener('submit',get_records());
+document.getElementById('reports').addEventListener('submit',get_records());
 // document.getElementById('body').onload;
 // document.getElementById('fillin').onload;
 // window.onload= get_records();
