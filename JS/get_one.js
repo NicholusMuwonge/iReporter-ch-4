@@ -34,7 +34,7 @@ function get_one_record() {
     .then (response_object => {
         console.log(response_object)
         // response_object.record_no == search_value
-        if (response_object.record_no){
+        if (response_object === true){
             output = ``
             for(n in response_object){
                 output += `
