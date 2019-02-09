@@ -43,7 +43,7 @@ function get_records() {
                                     <br><br><br><br>
             
                                     <ul class='first'>
-                                    <h3 id = "inside-bar">
+                                    <h3 id = "inside-bars">
                                         <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
                                         <li id="record_type">${response_object.data[n]['record_type']}</li>
                                         <li id ="status">${response_object.data[n].status}</li>

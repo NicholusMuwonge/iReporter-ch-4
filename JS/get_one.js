@@ -2,9 +2,6 @@ document.getElementById('submit-button').addEventListener('submit',get_one_recor
 
 function get_one_record() {
 
-    // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    // var dateTime = date+' '+time;
 
     let record_no = document.getElementById('search-area').value;
     access_token = localStorage.getItem('access_token');
@@ -13,7 +10,6 @@ function get_one_record() {
     const options = {
         method : 'GET',
         mode : 'cors',
-        // body : JSON.stringify(search_value),
         headers : {
             
             'Authorization': `Bearer ${access_token}`
@@ -21,7 +17,6 @@ function get_one_record() {
         cache : 'no-cache'
                     }
     
-    // var newroute = route"+record_no+"/
     if (access_token === null ){
         // alert ("Login first ⛔🚫");
         window.location.replace(
@@ -50,7 +45,7 @@ function get_one_record() {
                                 <br><br><br><br>
         
                                 <ul class='first'>
-                                <h3 id = "inside-bar">
+                                <h3 id = "inside-bars">
                                     <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
                                     <li id="record_type">${response_object['record_type']}</li>
                                     <li id ="status">${response_object['status']}</li>
