@@ -114,7 +114,7 @@ function get_one_record() {
         ]
 
         if (record_no in responses){
-            fetch(route,options)
+            fetch(red_flag_route,options)
             .then (res => res.json())
             .then (response_object => {
                 console.log(response_object)
