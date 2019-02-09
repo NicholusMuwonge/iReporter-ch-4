@@ -71,8 +71,13 @@ function get_one_record() {
                     document.getElementById('fillin').innerHTML= output;
         }
 
-        
-        else if (response_object === 'null'){
+        else if("msg" == "Token has expired") {
+            window.location.replace(
+                "index.html"
+                );
+
+        }
+        else {
             output = ``
             
             output += `
@@ -105,14 +110,16 @@ function get_one_record() {
                         document.getElementById('fillin').innerHTML= output;  
         }
 
-        else {
-            alert ("Your token is expired \n\ please login again")
-            // window.location.replace(
-            //     "index.html"
-            //     );
-        }
+        // else {
+        //     alert ("Your token is expired \n\ please login again")
+        //     // window.location.replace(
+        //     //     "index.html"
+        //     //     );
+        // }
     })
+    
     .catch(error => console.log(error));
+    
 
 }
 
