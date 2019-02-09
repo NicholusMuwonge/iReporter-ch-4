@@ -91,23 +91,11 @@ function get_one_record() {
             
                                 <p2 id = "body"> 👎 No records to display at the moment  </p2>
                                 <br><br><br><br>
-        
-                                <ul class='first'>
-                                <h3 id = "inside-bar">
-                                    <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
-                                    <li id="record_type">N/A</li>
-                                    <li id ="status">N/A</li>
-                                    <li id = "record_geolocation" >N/A</li>
-                                    <li id = "record_no" >N/A</li>
-                                    
-                                </h3>
-                                </ul>
-
-                            
                         </form>
                     </div><br><br>`;
                         console.log(output);
-                        document.getElementById('fillin').innerHTML= output;  
+                        document.getElementById('fillin').innerHTML= output; 
+                        alert ('the record is non existent') 
         }
 
         // else {
