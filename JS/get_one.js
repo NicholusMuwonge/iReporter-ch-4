@@ -72,7 +72,7 @@ function get_one_record() {
         }
 
         
-        else if (response_object === null){
+        else if (!response_object){
             output = ``
             for(n in response_object){
                 output += `
