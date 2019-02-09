@@ -89,7 +89,7 @@ function get_one_record() {
                                     <img id="w" src="images/avatar1.png" alt="avatar"  >
                                     <br><br>
                 
-                                    <p2 id = "body"> 👎 No records to display at the moment  </p2>
+                                    <p2 id = "body"> 👎 No records to display at the moment</p2>
                                     <br><br><br><br>
                             </form>
                         </div><br><br>`;
@@ -105,13 +105,16 @@ function get_one_record() {
     }
 
 
-    else if(redflag_search) {
+    else if(record_no) {
         let responses = [
-            'red_flags','Red-flags','redflags','RED_FLAGS','RED-FLAGS','red flags','RED FLAGS'
+            'red_flags','Red-flags',
+            'redflags',
+            'RED_FLAGS','RED-FLAGS','red flags',
+            'RED FLAGS'
         ]
 
-        if (redflag_search in responses){
-            fetch(red_flag_route,options)
+        if (record_no in responses){
+            fetch(route,options)
             .then (res => res.json())
             .then (response_object => {
                 console.log(response_object)
