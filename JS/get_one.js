@@ -72,43 +72,39 @@ function get_one_record() {
         }
 
         
-        else if (!response_object){
+        else if (response_object === 'null'){
             output = ``
-            for(n in response_object){
-                output += `
-                <br><br>
-                <div class="four" id = "template">
-                <div class="four">
-                        <form style="background-image:url('images/paper.jpg')" >
-                                    <div class="five">
-                                    <img id="w" src="images/avatar1.png" alt="avatar"  >
-                                    <br><br>
-                
-                                    <p2 id = "body"> 👎 No records to display at the moment  </p2>
-                                    <br><br><br><br>
             
-                                    <ul class='first'>
-                                    <h3 id = "inside-bar">
-                                        <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
-                                        <li id="record_type">N/A</li>
-                                        <li id ="status">N/A</li>
-                                        <li id = "record_geolocation" >N/A</li>
-                                        <li id = "record_no" >N/A</li>
-                                        
-                                    </h3>
-                                    </ul>
+            output += `
+            <br><br>
+            <div class="four" id = "template">
+            <div class="four">
+                    <form style="background-image:url('images/paper.jpg')" >
+                                <div class="five">
+                                <img id="w" src="images/avatar1.png" alt="avatar"  >
+                                <br><br>
+            
+                                <p2 id = "body"> 👎 No records to display at the moment  </p2>
+                                <br><br><br><br>
+        
+                                <ul class='first'>
+                                <h3 id = "inside-bar">
+                                    <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
+                                    <li id="record_type">N/A</li>
+                                    <li id ="status">N/A</li>
+                                    <li id = "record_geolocation" >N/A</li>
+                                    <li id = "record_no" >N/A</li>
                                     
-                                    <div >
-                                        <button class="e" ><a  >Edit</a></button>
-                                        <li id="del"> 🚮 </li>
-                                    </div>
-                                
-                            </form>
-                        </div><br><br>`;
+                                </h3>
+                                </ul>
+
+                            
+                        </form>
+                    </div><br><br>`;
                         console.log(output);
-                        document.getElementById('fillin').innerHTML= output;
-            };
+                        document.getElementById('fillin').innerHTML= output;  
         }
+
         else {
             alert ("Your token is expired \n\ please login again")
             // window.location.replace(
