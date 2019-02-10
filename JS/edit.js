@@ -47,7 +47,7 @@ function edit_record(){
         
                                 <ul class='first'>
                                 <h3 id = "inside-bars">
-                                    <li> <input  type="text" value="${record_geolocation}" id="update_record_geolocation" placeholder="update here .." ></li>
+                                    <li> <input  type="text"  id="update_record_geolocation" placeholder="update here .." ></li>
                                     <li id="record_type">${response_object['record_type']}</li>
                                     <li id ="status">${response_object['status']}</li>
                                     <li id = "record_geolocation" >${response_object['record_geolocation']}</li>
