@@ -57,7 +57,7 @@ function edit_record(){
                                 </ul>
                                 
                                 <div >
-                                    <button class="e" id = "edit-button" type= "submit" onclick="edit_record();" >Edit</button>
+                                    <button class="e" id = "edit-button" type= "submit" onclick="edit_record();" ><a>Edit</a></button>
                                     <li id="del"> 🚮 </li>
                                 </div>
                             
