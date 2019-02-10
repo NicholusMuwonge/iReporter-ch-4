@@ -1,6 +1,7 @@
 // The user can edit their geolocation.
 document.getElementById('submit-button').addEventListener('submit',get_one_record());
 document.getElementById('edit-button').addEventListener('submit',edit_record());
+
 function edit_record(){
     let record_no = document.getElementById('search-area').value;
     const route = 'https://databasetests.herokuapp.com/api/v2/record_no/'+record_no+'/';
@@ -46,7 +47,7 @@ function edit_record(){
         
                                 <ul class='first'>
                                 <h3 id = "inside-bars">
-                                    <li> <input  type="text" value="record_geolocation" id="update_record_geolocation" placeholder="update here .." ></li>
+                                    <li> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
                                     <li id="record_type">${response_object['record_type']}</li>
                                     <li id ="status">${response_object['status']}</li>
                                     <li id = "record_geolocation" >${response_object['record_geolocation']}</li>
