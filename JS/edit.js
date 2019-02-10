@@ -161,6 +161,7 @@ function delete_record() {
                     </div><br><br>`;
                     console.log(output);
                     document.getElementById('fillin').innerHTML= output;
+                    alert ('record was successfully deleted 🚮')
         }
 
         else if(response_object === "Token has expired") {
