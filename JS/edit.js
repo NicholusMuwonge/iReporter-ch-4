@@ -1,4 +1,4 @@
-// The user can edit their geolocation
+// The user can edit their geolocation.
 document.getElementById('submit-button').addEventListener('submit',get_one_record());
 document.getElementById('edit-button').addEventListener('submit',edit_record());
 function edit_record(){
