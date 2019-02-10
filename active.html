@@ -44,7 +44,7 @@
                                     <ul class='first'>
                                     <h3 id = "inside-bars">
                                         
-                                        <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
+                                        <li > <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
                                         <li id="record_type">record_type</li>
                                         <li id ="status"> record_status </li>
                                         <li id = "record_geolocation" >geolocation</li>
@@ -55,7 +55,7 @@
                                     </ul>
                                     
                                     <div >
-                                        <button class="e" ><a  >Edit</a></button>
+                                        <button class="e" id = "edit-button" type="submit" onclick="edit_record();"><a  >Edit</a></button>
                                         <li id="del"> 🚮 </li>
                                     </div>
                                 
@@ -77,5 +77,6 @@
               </form>
     <script src="./JS/active.js"></script>
     <script src="./JS/get_one.js"></script>
+    <script src="./JS/edit.js"></script>
 </body>
 </html>
