@@ -160,7 +160,7 @@ function get_one_record() {
                                 </h3>
                                 </ul>
                                 <div >
-                                    <li class="e" >.</li>
+                                <button class="e" >.</button>
                                    
                                 </div>
                             
@@ -247,7 +247,7 @@ function get_redflags(){
                                     </ul>
                                     
                                     <div >
-                                        <button class="e" ><a  >Edit</a></button>
+                                        <button class="e" >.</button>
                                        
                                     </div>
                                 
@@ -331,7 +331,7 @@ function get_interventions(){
                                     </ul>
                                     
                                     <div >
-                                        <button class="e" ><a  >Edit</a></button>
+                                        <button class="e" >.</button>
                                         
                                     </div>
                                 
@@ -415,6 +415,10 @@ function get_records() {
                                         
                                     </h3>
                                     </ul>
+                                    <div >
+                                        <button class="e" >.</button>
+                                        
+                                    </div>
                                 
                             </form>
                         </div><br><br>
