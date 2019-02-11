@@ -1,7 +1,7 @@
 
 
 
-function get_records() {
+window.onload = function get_records() {
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
     access_token = localStorage.getItem('access_token');
     const options = {
@@ -53,8 +53,7 @@ function get_records() {
                 </tr>`;
             
             console.log(output);
-            document.getElementById('fillin').innerHTML= output;
-            content.innerHTML += '</table>'};    
+            document.getElementById('tblack').innerHTML= output;};    
         }
         
         else if (response.statusCode === 401 ){
