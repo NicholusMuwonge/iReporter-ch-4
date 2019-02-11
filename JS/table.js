@@ -13,7 +13,7 @@ window.onload = function get_records() {
         },
         cache : 'no-cache'
                     }
-    if (access_token === null ){
+    if (access_token == null || access_token === false ){
         // alert ("Login first ⛔🚫");
         window.location.replace(
             "index.html"

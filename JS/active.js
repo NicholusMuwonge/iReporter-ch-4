@@ -1,10 +1,8 @@
 // fetching all records created, they will load by default on loading the page
 document.getElementById('reports').addEventListener('submit',get_records());
-// document.getElementById('body').onload;
-// document.getElementById('fillin').onload;
-// window.onload= get_records();
+
 function get_records() {
-    // e.preventDefault();
+    
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
     access_token = localStorage.getItem('access_token');
     const options = {
@@ -16,7 +14,7 @@ function get_records() {
         },
         cache : 'no-cache'
                     }
-    if (access_token === null ){
+    if (access_token == null || access_token === false){
         // alert ("Login first ⛔🚫");
         window.location.replace(
             "index.html"

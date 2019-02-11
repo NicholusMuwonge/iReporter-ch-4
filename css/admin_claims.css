@@ -107,7 +107,7 @@ header {
 }
 
 footer {
-	background-color: #222;
+	background-color: rgba(34, 34, 34, 0.377);
 	width: 100%;
 	padding-top: 8px;
 	color: #fff;
@@ -120,7 +120,7 @@ footer {
 	
 }
 footer p {
-	color: rgb(121, 121, 122);
+	color: rgb(228, 228, 236);
 	text-align: center;
 }
 #tblack {
