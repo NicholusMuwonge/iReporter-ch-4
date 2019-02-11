@@ -25,7 +25,7 @@ function edit_record(){
         },
         cache : 'no-cache'
                     }
-    if (access_token === null ){
+    if (access_token == null || access_token === false){
         window.location.replace(
             "index.html"
             );
@@ -124,7 +124,7 @@ function get_one_record() {
 
     
     
-    if (access_token === null ){
+    if (access_token == null || access_token === false){
         // alert ("Login first ⛔🚫");
         window.location.replace(
             "index.html"
@@ -368,7 +368,6 @@ function get_interventions(){
 }
     
 function get_records() {
-    // e.preventDefault();
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
     access_token = localStorage.getItem('access_token');
     const options = {
@@ -380,7 +379,7 @@ function get_records() {
         },
         cache : 'no-cache'
                     }
-    if (access_token === null ){
+    if (access_token == null || access_token === false){
         // alert ("Login first ⛔🚫");
         window.location.replace(
             "index.html"
@@ -437,9 +436,6 @@ function get_records() {
         }
         else if (response.statusCode === 404){
             alert ('no reports at the moment, Please create one ')
-            // window.location.assign(
-            //     "user_record.html"
-            //     );
         }
         else{
 
