@@ -25,7 +25,7 @@ function get_records() {
     .then (response_object => {
         console.log(response_object)
         if (response_object.msg == 'Successfully got all record  records'){
-            let output =`
+            let output =` <table width="85%" id="tblack" >
                 <tr id="top-bar">
                 <th>RECORD NO.</th>
                 <th>USER NAME</th>
@@ -53,7 +53,8 @@ function get_records() {
                 </tr>`;
             
             console.log(output);
-            document.getElementById('tblack').innerHTML= output;};    
+            document.getElementById('fillin').innerHTML= output;
+            content.innerHTML += '</table>'};    
         }
         
         else if (response.statusCode === 401 ){
