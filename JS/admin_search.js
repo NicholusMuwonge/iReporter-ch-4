@@ -68,7 +68,7 @@ function edit_record(){
                     </div><br><br>`;
                     console.log(output);
                     document.getElementById('fillin').innerHTML= output;
-                    alert ('Your status has beem updated')
+                    // alert ('Your status has beem updated')
         }
 
         else if(response_object === "Token has expired") {
