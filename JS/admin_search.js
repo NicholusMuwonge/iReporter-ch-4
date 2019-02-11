@@ -52,7 +52,6 @@ function edit_record(){
         
                                 <ul class='first'>
                                 <h3 id = "inside-bars">
-                                    <li> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
                                     <li id="record_type">${response_object['record_type']}</li>
                                     <li id ="status">${response_object['status']}</li>
                                     <li id = "record_geolocation" >${response_object['record_geolocation']}</li>
@@ -153,7 +152,6 @@ function get_one_record() {
         
                                 <ul class='first'>
                                 <h3 id = "inside-bars">
-                                    <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
                                     <li id="record_type">${response_object['record_type']}</li>
                                     <li id ="status">${response_object['status']}</li>
                                     <li id = "record_geolocation" >${response_object['record_geolocation']}</li>
@@ -162,7 +160,7 @@ function get_one_record() {
                                 </h3>
                                 </ul>
                                 <div >
-                                    <button class="e" >Edit</button>
+                                    <li class="e" >.</li>
                                    
                                 </div>
                             
@@ -239,7 +237,7 @@ function get_redflags(){
             
                                     <ul class='first'>
                                     <h3 id = "inside-bars">
-                                        <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
+                                       
                                         <li id="record_type">${response_object[n]['record_type']}</li>
                                         <li id ="status">${response_object[n]['status']}</li>
                                         <li id = "record_geolocation" >${response_object[n]['record_geolocation']}</li>
@@ -323,7 +321,7 @@ function get_interventions(){
             
                                     <ul class='first'>
                                     <h3 id = "inside-bars">
-                                        <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
+                                        
                                         <li id="record_type">${response_object[n]['record_type']}</li>
                                         <li id ="status">${response_object[n]['status']}</li>
                                         <li id = "record_geolocation" >${response_object[n]['record_geolocation']}</li>
@@ -409,7 +407,7 @@ function get_records() {
             
                                     <ul class='first'>
                                     <h3 id = "inside-bars">
-                                        <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
+                                        
                                         <li id="record_type">${response_object.data[n]['record_type']}</li>
                                         <li id ="status">${response_object.data[n].status}</li>
                                         <li id = "record_geolocation" >${response_object.data[n]['record_geolocation']}</li>
