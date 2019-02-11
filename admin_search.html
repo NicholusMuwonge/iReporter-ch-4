@@ -15,9 +15,9 @@
     <header>      
             <ul class="ul-links">
                     <li><a href="admin_dashboard.html"> Dashboard</a></li>
-                    <li><a href="">View Records</a></li>
-                    <li><a href="">Redflags</a></li>
-                    <li><a href="">Interventions</a></li>  
+                    <li><a href="" type="submit" onclick="get_records();" id="view_records">View Records</a></li>
+                    <li><a href="" type="submit" onclick="get_redflags();" id="reds">Redflags</a></li>
+                    <li><a href="" type="submit" onclick="get_interventions();" id="interventions">Interventions</a></li>  
                     <li><a href="index.html">logout</a></li>     
                     <h>
                             <input type="text" placeholder="Search.." name="search" id= "search-area">
@@ -58,7 +58,7 @@
                                     </ul>
                                     
                                     <div >
-                                        <select type="submit" id= "edit-status" onclick="edit_record();" placeholder='Choose one of the options'>
+                                        <select type="submit" id= "edit-status" placeholder='Choose one of the options'>
                                                 <option id = "reject" type="submit" onclick="edit_record();">Rejected</option>
                                                 <option id="resolve" type="submit" onclick="edit_record();">Resolved</option>
                                                 <option id="investigate" type="submit" onclick="edit_record();">Under Investigation</option>
