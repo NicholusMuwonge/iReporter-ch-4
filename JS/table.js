@@ -14,7 +14,6 @@ window.onload = function get_records() {
         cache : 'no-cache'
                     }
     if (access_token == null || access_token === false ){
-        // alert ("Login first ⛔🚫");
         window.location.replace(
             "index.html"
             );
@@ -64,9 +63,7 @@ window.onload = function get_records() {
         }
         else if (response.statusCode === 404){
             alert ('no reports at the moment, Please create one ')
-            // window.location.assign(
-            //     "user_record.html"
-            //     );
+            
         }
         else{
 
