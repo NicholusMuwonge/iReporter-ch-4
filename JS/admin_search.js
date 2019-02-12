@@ -68,7 +68,6 @@ function edit_record(){
                     </div><br><br>`;
                     console.log(output);
                     document.getElementById('fillin').innerHTML= output;
-                    // alert ('Your status has beem updated')
         }
 
         else if(response_object === "Token has expired") {
@@ -125,7 +124,6 @@ function get_one_record() {
     
     
     if (access_token == null || access_token === false){
-        // alert ("Login first ⛔🚫");
         window.location.replace(
             "index.html"
             );

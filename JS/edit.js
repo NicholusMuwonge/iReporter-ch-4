@@ -116,7 +116,7 @@ function delete_record() {
         },
         cache : 'no-cache'
                     }
-    if (access_token === null ){
+    if (access_token == null || access_token === false ){
         window.location.replace(
             "index.html"
             );

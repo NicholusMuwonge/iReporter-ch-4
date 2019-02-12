@@ -22,8 +22,7 @@ function get_one_record() {
 
     
     
-    if (access_token === null ){
-        // alert ("Login first ⛔🚫");
+    if (access_token == null || access_token === false ){
         window.location.replace(
             "index.html"
             );

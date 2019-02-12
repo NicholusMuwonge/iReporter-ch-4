@@ -29,7 +29,7 @@ function post_record(e) {
         cache : 'reload'
                     }
     
-    if (access_token === null ){
+    if (access_token == null || access_token === false ){
         // alert ("Login first ⛔🚫");
         window.location.replace(
             "index.html"
