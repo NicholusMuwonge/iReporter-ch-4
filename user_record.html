@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User dashboard|iReporter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/user_record.css" />
+    
+</head>
+<body style="background-image:url('images/paint.jpg');">
+    
+        <header>
+            <ul class='first'>
+                <li id="two"><a href=""> Post Report</a></li>
+                <li><a href="active.html">My Reports</a></li>
+                <li id="three"><a href="index.html">Logout</a></li>
+            </ul>
+        </header>
+        <div class="four">
+          <form id="post-record" action="#" >
+                <br><br><h2>Place Your Record</h2>
+                
+                      <div class="five">
+                        <label>Title</label>
+                        <input type="text" id = "title" placeholder="Main subject"><br><br>
+
+                        <label> Claim Type</label>
+                          <select name="Type of Claim" id= "Claim-type" placeholder='Choose one of the options'>
+                            <option id = "Red-Flag">Red-Flag</option>
+                            <option id="Intervention">Intervention</option>
+                          </select><br><br>
+                        <label>Your Claim</label>
+                        <textarea id = "body" type= "text"></textarea><br><br>
+                        <label>Red-Flag Geoloacation</label>
+                        <input id="geo" type='float' placeholder="longtides and latitude coordinates">
+                        <br><br>
+                        
+                        <label>Upload evidence here</label>
+                        <input type="file" action='' placeholder="Upload files here"><br><br>
+                        
+                        <button id = "submit" type="submit" >Submit</button>
+                        
+                      <span><p id="message"><span style"float:right;"="" style="
+                        float: right;
+                        color:red;
+                        text-decoration:  none;
+                    " >  </span></p> 
+                       
+
+                        
+                      </div>
+          </form> 
+        </div>
+        <script src="./JS/user_record.js"></script>
+</body>
+</html>
