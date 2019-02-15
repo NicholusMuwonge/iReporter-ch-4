@@ -62,8 +62,8 @@ function get_one_record() {
                                 </ul>
                                 
                                 <div >
-                                    <button class="e" ><a  >Edit</a></button>
-                                    <li id="del"> 🚮 </li>
+                                    <button class="e" ><a  ></a></button>
+                                    
                                 </div>
                             
                         </form>
@@ -149,8 +149,8 @@ function get_redflags(){
                                     </ul>
                                     
                                     <div >
-                                        <button class="e" ><a  >Edit</a></button>
-                                        <li id="del"> 🚮 </li>
+                                        <button class="e" ><a  ></a></button>
+                                        
                                     </div>
                                 
                             </form>
@@ -233,8 +233,8 @@ function get_interventions(){
                                     </ul>
                                     
                                     <div >
-                                        <button class="e" ><a  >Edit</a></button>
-                                        <li id="del"> 🚮 </li>
+                                        <button class="e" ><a  ></a></button>
+                                        
                                     </div>
                                 
                             </form>
