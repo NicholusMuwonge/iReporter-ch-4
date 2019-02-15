@@ -1,5 +1,6 @@
 // particular user's records
 document.getElementById('z').addEventListener('submit',get_redflags());
+document.getElementById('submit-button').addEventListener('submit',get_one_person_records());
 
 function get_one_person_records() {
     access_token = localStorage.getItem('access_token');
