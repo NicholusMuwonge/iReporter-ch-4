@@ -27,7 +27,7 @@ function get_one_person_records() {
     .then (res => res.json())
     .then (response_object => {
         console.log(response_object)
-        if (response_object){
+        if (n in response_object){
             output = ``
             
             output += `
@@ -38,17 +38,17 @@ function get_one_person_records() {
                                 <div class="five">
                                 <img id="w" src="images/avatar1.png" alt="avatar"  >
                                 <h2 id="user_id">${user_name}</h2>
-                                <h1 id = "record_date">${response_object['record_placement_date']}</h1><br><br>
-                                <p2 id = "body">${response_object['body']}</p2>
+                                <h1 id = "record_date">${response_object[n]['record_placement_date']}</h1><br><br>
+                                <p2 id = "body">${response_object[n]['body']}</p2>
                                 <br><br><br><br>
         
                                 <ul class='first'>
                                 <h3 id = "inside-bars">
                                     <li id="Edit"> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
-                                    <li id="record_type">${response_object['record_type']}</li>
-                                    <li id ="status">${response_object['status']}</li>
-                                    <li id = "record_geolocation" >${response_object['record_geolocation']}</li>
-                                    <li id = "record_no" >${response_object['record_no']}</li>
+                                    <li id="record_type">${response_object[n]['record_type']}</li>
+                                    <li id ="status">${response_object[n]['status']}</li>
+                                    <li id = "record_geolocation" >${response_object[n]['record_geolocation']}</li>
+                                    <li id = "record_no" >${response_object[n]['record_no']}</li>
                                     
                                 </h3>
                                 </ul>
