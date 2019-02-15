@@ -46,7 +46,7 @@ function login(e) {
             return document.getElementById('error').innerHTML = 'User credentials \
             are Invalid.';
         }
-        else if (response_object.logged_in_as == "nicholas"){
+        else if (response_object.admin == "TRUE"){
             token = response_object.access_token;
             localStorage.setItem('access_token',token);
             window.location.assign(
@@ -54,9 +54,13 @@ function login(e) {
                 ); //adminstrator dashbord using ghpages
             alert ('Welcome dear adminstrator')
         }
-        else if (response_object.logged_in_as != 'nicholas'){
+        else if (response_object.admin != 'TRUE'){
             token = response_object.access_token;
+            user_id = response_object.user_id;
+            user_name = response_object.logged_in_as;
             localStorage.setItem('access_token',token);
+            localStorage.setItem('user_id',user_id);
+            localStorage.setItem('user_name',user_name);
             window.location.assign(
                 "active.html"
                 ); //user feed ghpages
