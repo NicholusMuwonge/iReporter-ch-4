@@ -33,7 +33,7 @@ function get_one_person_records() {
             output = ``
             for(n in response_object){
                 for(m in n){
-                    if (search_value === response_object[m]['record_title']){
+                    if (search_value === response_object[n][m]['record_title']){
 
                         output += `
                         <br><br>
@@ -43,18 +43,18 @@ function get_one_person_records() {
                                             <div class="five">
                                             <img id="w" src="images/avatar1.png" alt="avatar">
                                             <h2 id="user_id">${user_name}</h2>
-                                            <h1 id = "record_date">${response_object[m]['record_placement_date']}</h1><br><br>
-                                            <h3 id = "body">${response_object[m]['record_title']}</h3>
-                                            <p2 id = "body">${response_object[m]['body']}</p2>
+                                            <h1 id = "record_date">${response_object[n][m]['record_placement_date']}</h1><br><br>
+                                            <h3 id = "body">${response_object[n][m]['record_title']}</h3>
+                                            <p2 id = "body">${response_object[n][m]['body']}</p2>
                                             <br><br><br><br>
                     
                                             <ul class='first'>
                                             <h3 id = "inside-bars">
                                                 
-                                                <li id="record_type">${response_object[m]['record_type']}</li>
-                                                <li id ="status">${response_object[m]['status']}</li>
-                                                <li id = "record_geolocation" >${response_object[m]['record_geolocation']}</li>
-                                                <li id = "record_no" >${response_object[m]['record_no']}</li>
+                                                <li id="record_type">${response_object[n][m]['record_type']}</li>
+                                                <li id ="status">${response_object[n][m]['status']}</li>
+                                                <li id = "record_geolocation" >${response_object[n][m]['record_geolocation']}</li>
+                                                <li id = "record_no" >${response_object[n][m]['record_no']}</li>
                                                 
                                             </h3>
                                             </ul>
