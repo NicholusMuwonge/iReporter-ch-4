@@ -37,7 +37,7 @@ function get_one_person_records() {
                 <div class="four">
                         <form style="background-image:url('images/paper.jpg')" >
                                     <div class="five">
-                                    <img id="w" src="images/avatar1.png" alt="avatar"  >
+                                    <img id="w" src="images/avatar1.png" alt="avatar">
                                     <h2 id="user_id">${user_name}</h2>
                                     <h1 id = "record_date">${response_object[m]['record_placement_date']}</h1><br><br>
                                     <p2 id = "body">${response_object[m]['record_title']}</p2>
