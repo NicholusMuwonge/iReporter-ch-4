@@ -4,7 +4,7 @@ document.getElementById('z').addEventListener('submit',get_redflags());
 function get_one_person_records() {
     access_token = localStorage.getItem('access_token');
     user_id = localStorage.getItem('user_id');
-    user_name = localStorage.getItem('logged_in_as');
+    user_name = localStorage.getItem('user_name');
     const route = 'https://databasetests.herokuapp.com/api/v2/auth/users/'+user_id+'/records/';
 
     const options = {
