@@ -6,6 +6,9 @@
     <title>User dashboard|iReporter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/user_record.css" />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
     
 </head>
 <body style="background-image:url('images/paint.jpg');">
@@ -32,9 +35,16 @@
                           </select><br><br>
                         <label>Your Claim</label>
                         <textarea id = "body" type= "text"></textarea><br><br>
-                        <label>Red-Flag Geoloacation</label>
-                        <input id="geo" type='float' placeholder="longtides and latitude coordinates">
-                        <br><br>
+                        
+                        <div id='map' style='width: 1200px; height: 300px;'>
+                        
+                        </div>
+                        <pre id='info'></pre>
+                        <div class="marker"></div>
+                        
+                        
+                        <!-- <input id="geo" type='float' placeholder="longtides and latitude coordinates">
+                        <br><br> -->
                         
                         <label>Upload evidence here</label>
                         <input type="file" action='' placeholder="Upload files here"><br><br>
@@ -54,5 +64,27 @@
         </div>
         <script src="./JS/user_record.js"></script>
         <script src="./JS/logout.js"></script>
-</body>
+        </body>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoibmljaG9sdXNtdXdvbmdlIiwiYSI6ImNqczc5a3VzdDA1NXEzeXBua3Z5cTZreW4ifQ.5bKx9vGtY_qLSwcxQ3Jwdw';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [32.57669254964398, 0.2510635733600992], // starting position
+  });
+  map.on('click', function (e) {
+  document.getElementById('info').innerHTML =
+    // e.point is the x, y coordinates of the mousemove event relative
+    // to the top-left corner of the map
+    // JSON.stringify(e.point) + '<br />' +
+    // e.lngLat is the longitude, latitude geographical position of the event
+    
+    
+    // let m= JSON.stringify(e.lngLat); 
+    `<label >Geoloacation</label>
+    <input type="text" value='${JSON.stringify(e.lngLat)}' id = "afterclick" placeholder="Main subject">`
+    
+    });
+</script>
+
 </html>

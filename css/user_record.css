@@ -6,6 +6,23 @@ body,html
     font-size: 15px;
 
 }
+.marker {
+	background-image: url('mapbox-icon.png');
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+  }
+#top{
+	margin-top:-3%;
+}
+#map{
+	margin-top: 8%;
+	margin-left: 0%;
+	box-shadow: #333;
+	border:1px solid rgb(20, 5, 5);
+}
 
 #two
 {
@@ -91,7 +108,8 @@ input[type="text"] {
 	text-align: center;
 	outline: none;
     border: 1px solid rgb(20, 5, 5);
-    margin-top: -30%;
+	margin-top: -30%;
+	background-color: rgba(189, 169, 143, 0.582);
 }
 input[type="text"] {
 	border-radius:7px; 
@@ -103,7 +121,22 @@ input[type="text"] {
 	outline: none;
     border: 1px solid rgb(20, 5, 5);
     margin-top: -30%;
-    margin-left:6%;
+	margin-left:6%;
+	background-color: rgba(189, 169, 143, 0.582);
+
+}
+
+#body{
+	border-radius:7px; 
+	width: 70%;
+
+	height: 90px;
+	padding: 5px;
+	text-align: center;
+	outline: none;
+    border: 1px solid rgb(20, 5, 5);
+	margin-left:3%;
+	background-color: rgba(189, 169, 143, 0.582);
 }
 
 button{

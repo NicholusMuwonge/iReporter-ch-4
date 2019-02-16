@@ -7,7 +7,7 @@ function post_record(e) {
     const route = 'https://databasetests.herokuapp.com/api/v2/records/';
     let record_title = document.getElementById('title').value; 
     let record_type = document.getElementById('Claim-type').value;
-    let record_geolocation = document.getElementById('geo').value;
+    let record_geolocation = document.getElementById('afterclick').value;
     let body = document.getElementById('body').value;
 
     let keys= {
@@ -29,13 +29,14 @@ function post_record(e) {
         cache : 'reload'
                     }
     
-    if (access_token === null ){
-        // alert ("Login first ⛔🚫");
-        window.location.replace(
-            "index.html"
-            );
+    // if (access_token === null ){
+    //     // alert ("Login first ⛔🚫");
+    //     window.location.replace(
+    //         "index.html"
+    //         );
 
-    }
+    // }
+
 
     fetch(route,options)
     .then (res => res.json())
@@ -75,3 +76,9 @@ function post_record(e) {
 
     .catch(error => console.log(error));
 }
+
+
+
+
+
+
