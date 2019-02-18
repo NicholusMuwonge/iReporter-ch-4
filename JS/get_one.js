@@ -44,7 +44,7 @@ function get_one_record() {
                     <form style="background-image:url('images/paper.jpg')" >
                                 <div class="five">
                                 <img id="w" src="images/avatar1.png" alt="avatar"  >
-                                <h2 id="user_id">${user_name}</h2>
+                                <h2 id="user_id">${response_object['user_id']}</h2>
                                 <h1 id = "record_date">${response_object['record_placement_date']}</h1><br><br>
                                 <p2 id = "body">${response_object['body']}</p2>
                                 <br><br><br><br>
@@ -131,7 +131,7 @@ function get_redflags(){
                         <form style="background-image:url('images/paper.jpg')" >
                                     <div class="five">
                                     <img id="w" src="images/avatar1.png" alt="avatar"  >
-                                    <h2 id="user_id">${user_name}</h2>
+                                    <h2 id="user_id">${response_object[n]['user_id']}</h2>
                                     <h1 id = "record_date">${response_object[n]['record_placement_date']}</h1><br><br>
                                     <p2 id = "body">${response_object[n]['body']}</p2>
                                     <br><br><br><br>
@@ -215,7 +215,7 @@ function get_interventions(){
                         <form style="background-image:url('images/paper.jpg')" >
                                     <div class="five">
                                     <img id="w" src="images/avatar1.png" alt="avatar"  >
-                                    <h2 id="user_id">${user_name}</h2>
+                                    <h2 id="user_id">${response_object[n]['user_id']}</h2>
                                     <h1 id = "record_date">${response_object[n]['record_placement_date']}</h1><br><br>
                                     <p2 id = "body">${response_object[n]['body']}</p2>
                                     <br><br><br><br>
