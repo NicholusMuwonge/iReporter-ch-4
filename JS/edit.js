@@ -92,7 +92,8 @@ function edit_record(){
                     </div><br><br>`;
                         console.log(output);
                         document.getElementById('fillin').innerHTML= output; 
-                        alert ('the record is non existent') 
+                        alert ('updating .....')
+                        alert('updated') 
         }
     })
     
