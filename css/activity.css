@@ -187,7 +187,7 @@ h1{
     color: lightcoral;
 }
 h3{
-    margin-top: -12%;
+    margin-top: 10%;
     color: lightcoral;
 }
 #inside-bar {
@@ -214,7 +214,7 @@ h3{
 	background-color: rgba(189, 169, 143, 0.582);
 }
 #inside-bars {
-    margin-top: -27%;
+    margin-top: 3%;
     color: lightcoral;
     margin-left: -6%;
     width:80%;
