@@ -56,8 +56,8 @@ function get_one_person_records() {
                                     </ul>
                                     
                                     <div >
-                                        <button class="e" ><a  >Edit</a></button>
-                                        <li id="del"> 🚮 </li>
+                                        <button class="e" ><a  ></a></button>
+                                       
                                     </div>
                                 
                             </form>
