@@ -6,7 +6,7 @@ document.getElementById('del').addEventListener('submit',delete_record());
 function edit_record(){
     let record_no = document.getElementById('search-area').value;
     const route = 'https://databasetests.herokuapp.com/api/v2/record_no/'+record_no+'/';
-    let record_geolocation = document.getElementById('update_record_geolocation').value;
+    let record_geolocation = document.getElementById('afterclick').value;
     access_token = localStorage.getItem('access_token');
     const options = {
         method : 'PUT',
@@ -48,7 +48,7 @@ function edit_record(){
         
                                 <ul class='first'>
                                 <h3 id = "inside-bars">
-                                    <li> <input  type="text" value="" id="update_record_geolocation" placeholder="update here .." ></li>
+                                    
                                     <li id="record_type">${response_object['record_type']}</li>
                                     <li id ="status">${response_object['status']}</li>
                                     <li id = "record_geolocation" >${response_object['record_geolocation']}</li>
@@ -58,8 +58,8 @@ function edit_record(){
                                 </ul>
                                 
                                 <div >
-                                    <button class="e" id = "edit-button" type= "submit" onclick="edit_record();" ><a>Edit</a></button>
-                                    <li id="del" type= "submit"> 🚮 </li>
+                                    <button class="e" id = "edit-button" type= "submit" onclick="edit_record();" ><a></a></button>
+                                    
                                 </div>
                             
                         </form>

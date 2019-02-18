@@ -194,8 +194,28 @@ h3{
     margin-top: 10%;
     color: lightcoral;
 }
+#map{
+	box-shadow: rgb(211, 231, 236);
+    border:1px solid rgb(20, 5, 5);
+    padding-top: -10%;
+    margin-left: -1.5%;
+    
+}
+
+#afterclick{
+    border-radius:7px; 
+	width: 80%;
+	margin-bottom: 30px;
+	height: 40px;
+	padding: 5px;
+	text-align: center;
+	outline: none;
+    border: 1px solid rgb(20, 5, 5);
+	margin-top: -30%;
+	background-color: rgba(189, 169, 143, 0.582);
+}
 #inside-bars {
-    margin-top: 8.5%;
+    margin-top: -27%;
     color: lightcoral;
     margin-left: -6%;
     width:80%;
@@ -249,7 +269,7 @@ h3{
     border: none;
 }
 /* #body {
-    margin-top: 10%;
+    margin-top: -10%;
 } */
 
 h
@@ -296,4 +316,8 @@ table tr:nth-of-type(odd) {
     height: 30%;
     background-color:lightgrey;
     padding-top: -70%;
+}
+
+#box{
+    margin-right: 0%;
 }
