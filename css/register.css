@@ -3,99 +3,197 @@ body {
 	margin: 0 !important;
 	color: #000;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;	
+    font-size: 13px;
+    background-color:white;	
+    background-image: url('images/typewriter.jpg');
 }
 
-.container {
-
-	margin-left: auto;
-	margin-right: auto;
-	padding: 20px;
-	background-color:#fefefe;
+.userbox {
+	padding: 0px;
+	background-color:rgba(245, 222, 179, 0.137);
 	width: 500px;
 	color: #fff;
-	min-height: 300px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-	border-radius: 4px;
-}
-
-
-
-
-p {
-	font-size: 13px;
-	color: #222;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-h1, h2 {
-	color: #000;
-	font-family: "Open Sans", sans-serif;
-	line-height: 18px;
-}
-
-h1 {
-	font-size: 28px;
-	text-transform: uppercase;
-}
-
-select{
-	width: 100%;
-	margin-bottom: 10px;
-	height: 35px;
-	padding: 5px;
-	text-align: center;
-	outline: none;
-	border: 1px solid #ddd;
-	border-radius:7px;
+	box-shadow: 0 4px 12px rgba(78, 194, 223, 0.329);
+    border-radius: 8px;
+    height: 400px;
+    padding-top: 8px;
+    border: rgba(115, 207, 235, 0.651) 0.2px solid;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    
 }
 
 input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
-	border-radius:7px; 
-	width: 100%;
-	margin-bottom: 10px;
-	height: 25px;
-	padding: 5px;
-	text-align: center;
-	outline: none;
-	border: 1px solid #ddd;
-}
-
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
-	border-color: #14B9D6;
-	border-radius:7px;
-}
-
-textarea {
-	width: 100%;
-	margin-bottom: 10px;
-	height: 150px;
-	padding: 5px;
-	outline: none;
-	border: 1px solid #ddd;
-	border-radius:7px;
-}
-
-button {
-	cursor: pointer;
-	margin-top: 10px;
-	width: 103%;
-	margin-bottom: 10px;
-	color: #fff;
-	border: 0px solid;
+	/* border-radius:5px;  */
+	width: 430px;
+	margin-bottom: -4.9%;
 	height: 40px;
-	background-color:gold;
 	padding: 5px;
 	text-align: center;
-	border-radius:7px;
-	
-	
+	outline: none;
+    border: 0.6px solid rgb(207, 192, 103);
+    border-block-start: rgba(245, 222, 179, 0.336);
+    background-color: rgba(245, 222, 179, 0.295);
+    margin-top: 4%;
+    border-bottom: rgba(24, 20, 13, 0.336) 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.24);
+    color:rgb(226, 80, 43);
+    /* padding-top: -15%; */
 }
 
+input:focus:invalid{
+    /* background-color: rgba(199, 42, 21, 0.315); */
+    border:1px solid red;
+    
+}
 
- 
+input:valid{
+    background-color: rgba(245, 222, 179, 0.295);
+    border: 0.6px solid greenyellow;
+    /* background: url('images/valid.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 20px 20px; */
+    
+}
 
+#line{
+    display: block;
+    margin-top: 8%;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: dotted;
+    border-bottom-color: black;
+    border-width: 2.7px;
+    box-shadow: rgb(240, 21, 21);
+    overflow: hidden;
+}
 
+#head{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: none;
+    font-size: 90%;
+    margin-left: 0%;
+    color:maroon;
+}
 
+#heading{
+    font-family: monospace;
+    font-style: none;
+    font-size: 200%;
+    margin-left: 34%;
+    margin-top: -12%;
+    color: rgba(26, 24, 24, 0.644);
+    font-weight: 900;
+    /* background:rgba(77, 163, 77, 0.548); */
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-style: italic;
+    
+}
+p a{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-style: italic;
+    
+}
 
+button{
+    color:rgb(199, 151, 21);
+    background-color:rgb(81, 48, 172);
+    border: #000 0.6px solid;
+    border-radius: 5px;
+    margin-left: 84%;
+    padding: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    width: 70px;
+    cursor: pointer;
+    margin-top: 10%;
+}
 
+button:hover{
+    color:rgb(199, 42, 21);
+    background-color:rgb(172, 114, 48);
+    border: #000 0.6px solid;
+    border-radius: 5px;
+    margin-left: 84%;
+    padding: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    width: 70px;
+}
+
+#submit:after{
+    content: none;
+    background-color:rgb(172, 114, 48);
+    border: #000 0.6px solid;
+    border-radius: 5px;
+    margin-left: 84%;
+    padding: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    width: 70px;
+    transition: all 0.8s;
+}
+
+#submit:active:after{
+    padding: 0;
+    margin:0;
+    opacity:1;
+    transition: 0s;
+}
+
+::-webkit-input-placeholder{
+    text-align: left;
+    font-size: 90%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    text-decoration-style: dotted;
+    font-style: italic;
+    font-size: 160%;
+	font-weight: 400;
+	color: rgb(133, 131, 131);
+}
+
+#response {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336cc; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    width: 450px;
+    margin-left: 31%;
+    opacity: 1;
+    transition: opacity 0.6s; /*time its supposed to fade out*/
+    border-radius: 8px;
+    
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }

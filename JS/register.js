@@ -30,16 +30,23 @@ function signup(e) {
     .then (response_object => {
         if (user_password != password2){
             return document.getElementById('message').innerHTML = (
-                "Passwords dont match 😢 "
+                `<div class="alert" id="alert">
+                <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
+                <p id= "response">"Passwords dont match 😢 "</p>`
+                
             );
         }
         else if (response_object.error_message == 'some fields are missing'){
             return document.getElementById('message').innerHTML =
-                'some fields are missing';
+                (`<div class="alert" id="alert">
+                <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
+                <p id= "response">"some fields are missing "</p>'`);
         }
         else if (response_object.error_message == 'Password is wrong. It should be at-least 5 characters long, and alphanumeric.'){
             return document.getElementById('message').innerHTML =
-                "Password is wrong. It should be at-least 5 characters long, and alphanumeric.";
+            `<div class="alert" id="alert">
+            <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
+            <p id= "response">password cant be less than 5 characters </p>`;
         }
         
         else if (response_object.error_message == "User email {0} is wrong, \
@@ -55,17 +62,22 @@ function signup(e) {
 
         else if (response_object.error_message == 'email already exists'){
             return document.getElementById('message').innerHTML =
-                "Please just go on and signin 👆";
+                `"<div class="alert" id="alert">
+                <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
+                <p id= "response">You seem to be registered,login instead</p>"`;
         }
 
         else if (response_object.error_message == 'Username already taken'){
             return document.getElementById('message').innerHTML =
-                'Username already taken';
-        }
+            `<div class="alert" id="alert">
+            <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
+            <p id= "response">Username is already taken</p>`;        }
 
         else if (response_object.status == 'success'){
             return document.getElementById('message').innerHTML =
-                'Your account has been created successfully 😋';
+            `<div class="alert" id="alert">
+            <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
+            <p id= "response">Your account has been created successfully 😋</p>`;
         }
         
     })
