@@ -1,7 +1,7 @@
 // This where I patch Js and backend api for signup feature
 document.getElementById('submiter').addEventListener('submit', signup);
-function signup(e) {
-    e.preventDefault();
+function signup() {
+    // e.preventDefault();
     const route= "https://databasetests.herokuapp.com/api/v2/auth/signup/";
 
     let user_name = document.getElementById('username').value; 
