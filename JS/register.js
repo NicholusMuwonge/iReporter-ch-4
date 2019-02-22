@@ -1,5 +1,5 @@
 // This where I patch Js and backend api for signup feature
-document.getElementById('submiter').addEventListener('submit', signup());
+document.getElementById('submiter').addEventListener('submit',signup());
 function signup() {
     // e.preventDefault();
     const route= "https://databasetests.herokuapp.com/api/v2/auth/signup/";
@@ -89,24 +89,24 @@ function signup() {
 }
 
 
-function feedback(){
-    // Get all elements with class="closebtn"
-    var close = document.getElementsByClassName("closebtn");
-    var i;
+// function feedback(){
+//     // Get all elements with class="closebtn"
+//     var close = document.getElementsByClassName("closebtn");
+//     var i;
 
-    // Loop through all close buttons
-    for (i = 0; i < close.length; i++) {
-        // When someone clicks on a close button
-        close[i].onclick = function(){
+//     // Loop through all close buttons
+//     for (i = 0; i < close.length; i++) {
+//         // When someone clicks on a close button
+//         close[i].onclick = function(){
 
-        // Get the parent of <span class="closebtn"> (<div class="alert">)
-        var div = this.parentElement;
+//         // Get the parent of <span class="closebtn"> (<div class="alert">)
+//         var div = this.parentElement;
 
-        // Set the opacity of div to 0 (transparent)
-        div.style.opacity = "0";
+//         // Set the opacity of div to 0 (transparent)
+//         div.style.opacity = "0";
 
-        // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
-        setTimeout(function(){ div.style.display = "none"; }, 600);
-        }
-    }
-}
+//         // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
+//         setTimeout(function(){ div.style.display = "none"; }, 600);
+//         }
+//     }
+// }
