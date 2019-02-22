@@ -64,7 +64,7 @@ function signup(e) {
         }
 
         else if (response_object.error_message == 'email already exists'){
-            return document.getElementById('message').innerHTML =
+            return document.getElementById('addin').innerHTML =
                 `<div class="alert" id="alert">
                 <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
                 <p id= "response">You seem to be registered,login instead</p>`;
