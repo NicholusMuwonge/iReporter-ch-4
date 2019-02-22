@@ -30,7 +30,7 @@ function signup() {
     .then (response_object => {
         console.log(response_object)
         if (user_password != password2){
-            return document.getElementById('message').innerHTML = (
+            return document.getElementById('addin').innerHTML = (
                 `<div class="alert" id="alert">
                 <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
                 <p id= "response">"Passwords dont match 😢 "</p>`
@@ -38,13 +38,13 @@ function signup() {
             );
         }
         else if (response_object.error_message == 'some fields are missing'){
-            return document.getElementById('message').innerHTML =
+            return document.getElementById('addin').innerHTML =
                 (`<div class="alert" id="alert">
                 <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
                 <p id= "response">"some fields are missing "</p>'`);
         }
         else if (response_object.error_message == 'Password is wrong. It should be at-least 5 characters long, and alphanumeric.'){
-            return document.getElementById('message').innerHTML =
+            return document.getElementById('addin').innerHTML =
             `<div class="alert" id="alert">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
             <p id= "response">password cant be less than 5 characters </p>`;
@@ -57,7 +57,7 @@ function signup() {
         }
         else if (response_object.error_message == "A name should consist of \
         only alphabetic characters"){
-            return document.getElementById('error').innerHTML =
+            return document.getElementById('addin').innerHTML =
                 "write your name only in alphabet";
         }
 
@@ -69,13 +69,13 @@ function signup() {
         }
 
         else if (response_object.error_message == 'Username already taken'){
-            return document.getElementById('message').innerHTML =
+            return document.getElementById('addin').innerHTML =
             `<div class="alert" id="alert">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
             <p id= "response">Username is already taken</p>`;        }
 
         else if (response_object.status == 'success'){
-            return document.getElementById('message').innerHTML =
+            return document.getElementById('addin').innerHTML =
             `<div class="alert" id="alert">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
             <p id= "response">Your account has been created successfully 😋</p>`;
@@ -87,24 +87,23 @@ function signup() {
 }
 
 
-function pop_up(){
-    // Get all elements with class="closebtn"
-    var close = document.getElementsByClassName("closebtn");
-    var i;
-    
-    // Loop through all close buttons
-    for (i = 0; i < close.length; i++) {
-      // When someone clicks on a close button
-      close[i].onclick = function(){
-    
-        // Get the parent of <span class="closebtn"> (<div class="alert">)
-        var div = this.parentElement;
-    
-        // Set the opacity of div to 0 (transparent)
-        div.style.opacity = "0";
-    
-        // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
-        setTimeout(function(){ div.style.display = "none"; }, 600);
-      }
+
+// Get all elements with class="closebtn"
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+// Loop through all close buttons
+for (i = 0; i < close.length; i++) {
+    // When someone clicks on a close button
+    close[i].onclick = function(){
+
+    // Get the parent of <span class="closebtn"> (<div class="alert">)
+    var div = this.parentElement;
+
+    // Set the opacity of div to 0 (transparent)
+    div.style.opacity = "0";
+
+    // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
+    setTimeout(function(){ div.style.display = "none"; }, 600);
     }
-    }
+}
