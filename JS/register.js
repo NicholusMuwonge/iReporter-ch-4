@@ -1,7 +1,7 @@
 // This where I patch Js and backend api for signup feature
 document.getElementById('submit').addEventListener('submit', signup);
-function signup() {
-    // e.preventDefault();
+function signup(e) {
+    e.preventDefault();
     const route= "https://databasetests.herokuapp.com/api/v2/auth/signup/";
 
     let user_name = document.getElementById('username').value; 
@@ -39,9 +39,9 @@ function signup() {
         }
         else if (response_object.error_message == 'some fields are missing'){
             return document.getElementById('addin').innerHTML =
-                (<div class="alert" id="alert">
+                `<div class="alert" id="alert">
                 <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
-                <p id= "response">"some fields are missing "</p>');
+                <p id= "response">"some fields are missing "</p>'`;
         }
         else if (response_object.error_message == 'Password is wrong. It should be at-least 5 characters long, and alphanumeric.'){
             return document.getElementById('addin').innerHTML =
@@ -58,7 +58,9 @@ function signup() {
         else if (response_object.error_message == "A name should consist of \
         only alphabetic characters"){
             return document.getElementById('addin').innerHTML =
-                "write your name only in alphabet";
+            `<div class="alert" id="alert">
+            <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
+            <p id= "response">name can only be in alphabet </p>`;
         }
 
         else if (response_object.error_message == 'email already exists'){
