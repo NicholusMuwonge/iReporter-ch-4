@@ -139,7 +139,7 @@ button:hover{
     padding: 2%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
     width: 70px;
-    transition: all 0.8s;
+    /* transition: all 0.8s; */
 }
 
 #submit:active:after{
@@ -194,7 +194,7 @@ h1{
     font-size: 22px;
     line-height: 20px;
     cursor: pointer;
-    transition: 0.3s;
+    /* transition: 0.3s; */
   }
   
   /* When moving the mouse over the close button */
