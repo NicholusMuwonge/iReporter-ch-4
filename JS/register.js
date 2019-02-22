@@ -39,9 +39,9 @@ function signup() {
         }
         else if (response_object.error_message == 'some fields are missing'){
             return document.getElementById('addin').innerHTML =
-                (`<div class="alert" id="alert">
+                (<div class="alert" id="alert">
                 <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
-                <p id= "response">"some fields are missing "</p>'`);
+                <p id= "response">"some fields are missing "</p>');
         }
         else if (response_object.error_message == 'Password is wrong. It should be at-least 5 characters long, and alphanumeric.'){
             return document.getElementById('addin').innerHTML =
