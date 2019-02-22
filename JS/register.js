@@ -28,6 +28,7 @@ function signup() {
     fetch (route,options)
     .then (res => res.json())
     .then (response_object => {
+        console.log(response_object)
         if (user_password != password2){
             return document.getElementById('message').innerHTML = (
                 `<div class="alert" id="alert">
