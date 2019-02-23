@@ -8,18 +8,20 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/register.css" />
     
 </head>
-<body >
+<body id="all"  style="background-image:url('images/typewriter.jpg');" >
     <div>
         <h1>" Welcome to the ireporter Signup"</h1>
-        <!-- <p id= "response"></p> -->
+        
     </div>
-    <section id="addin">
-    
+    <section id="addin" >
+        <!-- <div class="lds-css ng-scope" align="center" ><div style="width:50%;height:50%" class="lds-ellipsis"><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div></div> -->
+        
     </section>
     <section class="userbox">
       <form action="#">
         <table width="80%" align="center" border="0">
                 <tbody>
+                    
                 <tr><td><p id="heading">iReporter</p></td></tr>
                 <tr><td><p id="head">Signup</p></td></tr>
                 <tr><div id="line"></div></tr>
@@ -36,10 +38,13 @@
                   <td  ><input  required="" name="password2" id="password2" placeholder="Confirm Password" type="password" autocomplete="password"></td>
                 </tr>
                 <tr>
-                  <td><button id = "deliver" type="submit" onclick="signup(e);"> Signup </button></td>
+                  <td><button id = "deliver" type="submit" onclick="signup(e);"  onclick="on(e);"> Signup </button></td>
                 </tr>
                 <tr>
                   <td><p>I have an account!<a href="index.html">Login</a></td>
+                </tr>
+                <tr>
+                    <td id="gif"></td>
                 </tr>
               </tbody>
         </table>

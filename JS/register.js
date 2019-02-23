@@ -1,5 +1,8 @@
 // This where I patch Js and backend api for signup feature
 document.getElementById('deliver').addEventListener('click',signup);
+document.getElementById('deliver').addEventListener('click',on);
+document.getElementById('addin').addEventListener('load',off);
+
 function signup(e) {
     e.preventDefault();
     const route= "https://databasetests.herokuapp.com/api/v2/auth/signup/";
@@ -78,7 +81,7 @@ function signup(e) {
 
         else if (response_object.status == 'success'){
             return document.getElementById('addin').innerHTML =
-            `<div class="alert" id="alert">
+            `<div class="alert" id="green">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
             <p id= "response">Your account has been created successfully 😋</p>`;
         }
@@ -89,24 +92,51 @@ function signup(e) {
 }
 
 
-// function feedback(){
-//     // Get all elements with class="closebtn"
-//     var close = document.getElementsByClassName("closebtn");
-//     var i;
+function feedback(){
+    // Get all elements with class="closebtn"
+    var close = document.getElementsByClassName("closebtn");
+    var i;
 
-//     // Loop through all close buttons
-//     for (i = 0; i < close.length; i++) {
-//         // When someone clicks on a close button
-//         close[i].onclick = function(){
+    // Loop through all close buttons
+    for (i = 0; i < close.length; i++) {
+        // When someone clicks on a close button
+        close[i].onclick = function(){
 
-//         // Get the parent of <span class="closebtn"> (<div class="alert">)
-//         var div = this.parentElement;
+        // Get the parent of <span class="closebtn"> (<div class="alert">)
+        var div = this.parentElement;
 
-//         // Set the opacity of div to 0 (transparent)
-//         div.style.opacity = "0";
+        // Set the opacity of div to 0 (transparent)
+        div.style.opacity = "0";
 
-//         // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
-//         setTimeout(function(){ div.style.display = "none"; }, 600);
-//         }
-//     }
+        // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+    }
+}
+
+// function on() {
+//     document.getElementById("overlay").style.display = "block";
+
+//   }
+  
+// function off() {
+//     document.getElementById("overlay").style.display = "none";
 // }
+
+function on(e){
+    e.preventDefault();
+    document.getElementById('gif').innerHTML = 
+    `<div class="loader" id="overlay" ><div class="duo duo1"><div class="dot dot-a"></div><div class="dot dot-b"></div></div><div class="duo duo2"><div class="dot dot-a"></div><div class="dot dot-b"></div></div></div>`;
+    setTimeout(function(){document.getElementById("gif").style.display = "none";},10000);
+}
+
+// window.addEventListener("load",() => {
+//     // e.preventDefault();
+//     // return document.getElementById('gif').innerHTML = ``;
+//     document.getElementById("overlay").style.display = "none";
+// });
+
+document.onreadystatechange = function off(){
+    return document.getElementById("gif").innerHTML=``;
+    
+}
