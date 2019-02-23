@@ -81,7 +81,7 @@ function signup(e) {
 
         else if (response_object.status == 'success'){
             return document.getElementById('addin').innerHTML =
-            `<div class="alert" id="green">
+            `<div class="alerts" id="green">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
             <p id= "response">Your account has been created successfully 😋</p>`;
         }

@@ -174,6 +174,7 @@ h1{
     text-align: left;
     text-decoration-style: none;
     color: #c2dfd7;
+    font-size: 60%;
 }
 
 /* The alert message box */
@@ -197,13 +198,13 @@ h1{
     
   }
 
-.green{
+#green{
 padding: 20px;
-background-color: #276425cc; /* Red */
+background-color: #2a7428cc; /* Red */
 color: white;
 margin-bottom: 15px;
 width: 450px;
-margin-left: 31%;
+/* margin-left: 31%; */
 opacity: 1;
 /* transition: opacity 0.6s; time its supposed to fade out */
 border-radius: 8px;
@@ -212,6 +213,8 @@ border-radius: 8px;
 -o-transition: opacity 2s ease-in;
 -ms-transition: opacity 2s ease-in;
 transition: opacity 2s ease-in;
+margin-left: auto;
+margin-right: auto;
 }
   
   /* The close button */
