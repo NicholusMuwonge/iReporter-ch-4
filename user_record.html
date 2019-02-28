@@ -1,90 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>User dashboard|iReporter</title>
+    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/user_record.css" />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-
+    <script src="./JS/logout.js" ></script>
+    <!-- <script src="./Js/home.js"></script> -->
+    <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' /> -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     
 </head>
-<body style="background-image:url('images/paint.jpg');">
-    
-        <header>
-            <ul class='first'>
-                <li id="two"><a href=""> Post Report</a></li>
-                <li><a href="active.html">My Reports</a></li>
-                <li id="three"><a href="index.html" onclick="logout();">Logout</a></li>
-            </ul>
-        </header>
-        <div class="four">
-          <form id="post-record" action="#" >
-                <br><br><h2>Place Your Record</h2>
-                
-                      <div class="five">
-                        <label>Title</label>
-                        <input type="text" id = "title" placeholder="Main subject"><br><br>
 
-                        <label> Claim Type</label>
-                          <select name="Type of Claim" id= "Claim-type" placeholder='Choose one of the options'>
-                            <option id = "Red-Flag">redflag</option>
-                            <option id="Intervention">intervention</option>
-                          </select><br><br>
-                        <label>Your Claim</label>
-                        <textarea id = "body" type= "text"></textarea><br><br>
-                        
-                        <div id='map' style='width: 1200px; height: 300px;'>
-                        
-                        </div>
-                        <pre id='info'></pre>
-                        <div class="marker"></div>
-                        
-                        
-                        <!-- <input id="geo" type='float' placeholder="longtides and latitude coordinates">
-                        <br><br> -->
-                        
-                        <label>Upload evidence here</label>
-                        <input type="file" action='' placeholder="Upload files here"><br><br>
-                        
-                        <button id = "submit" type="submit" >Submit</button>
-                        
-                      <span><p id="message"><span style"float:right;"="" style="
-                        float: right;
-                        color:red;
-                        text-decoration:  none;
-                    " >  </span></p> 
-                       
-
-                        
-                      </div>
-          </form> 
-        </div>
-        <script src="./JS/user_record.js"></script>
-        <script src="./JS/logout.js"></script>
-        </body>
-<script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoibmljaG9sdXNtdXdvbmdlIiwiYSI6ImNqczc5a3VzdDA1NXEzeXBua3Z5cTZreW4ifQ.5bKx9vGtY_qLSwcxQ3Jwdw';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [32.57669254964398, 0.2510635733600992], // starting position
-  });
-  map.on('click', function (e) {
-  document.getElementById('info').innerHTML =
-    // e.point is the x, y coordinates of the mousemove event relative
-    // to the top-left corner of the map
-    // JSON.stringify(e.point) + '<br />' +
-    // e.lngLat is the longitude, latitude geographical position of the event
+<body class="bg-img">
     
+    <section id="view">
+            <div id="mySidenav" class="sidenav">
+                <div id="main"></div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#" id="home">Home</a>
+                    <a href="#" id="red">Redflags</a>
+                    <a href="#" id="blue">Interventions</a>
+                    <a href="#" id="profile">Profile</a>
+                    <a href="#" id="logout" onclick="logout();">Logout</a>
+            </div>
+        
+        <div id="top-bar"><div class="next"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span></div> 
+        <p id="search" onclick="logout();"><a>LOGOUT</a></p></div>
+        <h1>Create Records</h1>
+        <div id="snackbar"><span ><p class="show"> Fillout all those fields</p></span></div>
+        
+        <form id="around">
+            <table id="table">
+                    <!-- <tr><div id="line"></div></tr> -->
+                <tr>
+                    <td><input required="" id ="title" name="user_name" placeholder="Incident-Title" type="text"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p2 id="label">Claim Type</p2>
+                        <select name="Type of Claim" id= "Claim-type" placeholder='record_type'>
+                          <option id = "Red-Flag">redflag</option>
+                          <option id="Intervention">intervention</option>
+                        </select>
+                    </td>
+                    <!-- <td><label>Interventions</label><input required="" id = "title" name="user_name" placeholder="Incident-Title" type="checkbox"></td> -->
+                </tr>
+                <tr>
+                    <!-- <td><td><label></label>Incident-Details</label></td></td> -->
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id = "body" type= "text" placeholder="Type Incident details here" required=""></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div id='map'></div>
+            <pre id='coordinates' class='coordinates'></pre>
+            <br>
+            <input type="text" value='' id = "afterclick" required="" placeholder="Geolocation(move marker on the map)" class="afterclick">
+            <tr><td><button  id = "post_record"  type="button" onclick="myFunction()">Create</button></td></tr>
+        </form>
+        <!-- <div class="add" ><img src="./images/add.png" ></div> -->
+        
+    </section>
     
-    // let m= JSON.stringify(e.lngLat); 
-    `<label >Geoloacation</label>
-    <input type="text" value='${JSON.stringify(e.lngLat)}' id = "afterclick" placeholder="Main subject">`
-    
-    });
-</script>
-
+</body>
+<script src="./JS/user_record.js"></script>
 </html>

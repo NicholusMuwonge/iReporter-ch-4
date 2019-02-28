@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title> iReporter | login</title>
-    <link type="text/css" href="css/main.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
     
 </head>
-<body style="background-image:url('images/paper.jpg')"> 
-
-<div class="container top-padding">
-  
-        <form id="signin" action="#" style="background-image:url('images/wood.jpeg')">
-
-            <h1 align="center" ><strong>iReporter</strong><br><br> USER SIGN-IN</h1><br/>
-            
-            <table width="80%" align="center" border="0">
-            <tbody>
-              <tr>
-                <td ><input required="" autocomplete="off" id="username"  name="user_name" placeholder="Username" type="text"></td>
-              </tr>
-              <tr>
-                <td ><input  required="" autocomplete="off" name="user_password"  id="password" placeholder="Password" type="password"></td>
-              </tr>
-              <tr>
-                <td><button type="submit" id="submit_button" onclick="login">Login</button></td>
-              </tr>
-              <tr>
-                <td><span><p id="error"></p> </span></td>
-              </tr>
-              <tr>
-                <td><p>Dont have an account ?. <a id = "signup_prompt" href="register.html">Create account</a>
-                  <!-- <a id ="admin_login_redirect" href="admin_login.html"><span style"float:right;"="" style="
-                    float: right;
-                    color:black;
-                    text-decoration:  none;
-                ">ADMIN</span> </a></p></td> -->
-              </tr>
-            </tbody>
-          </table>
-          </form>
-          
-        </div>
-        <p class="r">"Your opinion Counts and - <br><br>will eventually matter.<br><br> Raise all that dont feel <br><br>good for your society"</p></div>
+<body class="bg-img">
+    <body >
+    <div><h1>"Snitch in style but with greater purpose.Ireporter is here just for that <br> 
+        to get all your community concerns to the authorities"</h1>
     
-    <script src="./JS/Index.js"></script>
+    </div>
+    <section id="addin" >
+            
+    </section>
+    <!-- <div class="alert" id="alert">
+            <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
+            <p id= "response"></p>
+        </div> -->
+    <!-- </td> -->
+    <section class="userbox" >
+        <form id="form">
+            <table width="80%" align="center" border="0" >
+                    <tbody>
+                    <tr><td><p id="heading">iReporter</p></td></tr>
+                    <tr><td><p id="head">Login</p></td></tr>
+                    <tr><div id="line"></div></tr>
+                    <tr>
+                      <td><input  required="" id = "username" name="user_name" placeholder="Username" type="text"></td>
+                    </tr>
+                    <tr>
+                      <td ><input required="" name="password" id ="user_password" placeholder="Password" type="password"></td>
+                    </tr>
+                    <tr><div id="lines"></div></tr>
+                      <td><button id = "submiter" type="submit" onclick="login();" onclick="on();" >Login</button></td>
+                    </tr>
+                    <tr>
+                      <td><p >I have no account !  <a href="register.html">signup</a></td>
+                    </tr>
+                    
+        </form>
+        <tr>
+                <td id="gif"></td>
+        </tr>
+    </section>
+    
+<script src="./JS/Index.js"></script>
+
 </body>
+
 </html>

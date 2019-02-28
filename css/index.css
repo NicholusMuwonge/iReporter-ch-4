@@ -4,14 +4,14 @@ body {
 	color: #000;
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
-    background-color:white;	
-    /* background-image: inherit; */
-    
+    background-color:rgba(241, 238, 233, 0.781);	
+    /* background-image: url('images/typewriter.jpg'); */
+    font-style: initial;
 }
-
+/* rgba(245, 222, 179, 0.719); */
 .userbox {
-	padding:-6px;
-	background-color:rgba(255, 255, 255, 0.452);
+	padding:-4px;
+	background-color:rgba(223, 222, 222, 0.87);
 	width: 500px;
 	color: #fff;
 	box-shadow: 0 4px 12px rgba(78, 194, 223, 0.329);
@@ -21,24 +21,29 @@ body {
     border: rgba(115, 207, 235, 0.651) 0.2px solid;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 5%;
+    margin-top: 2%;
     
 }
+
+form{
+    background-color:rgba(255, 255, 255, 0.103);
+}
+
 input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
-	/* border-radius:5px;  */
+	border-radius:3px; 
 	width: 430px;
 	margin-bottom: -4.9%;
-	height: 35px;
+	height: 40px;
 	padding: 5px;
 	text-align: center;
 	outline: none;
     border: 0.6px solid rgb(207, 192, 103);
     border-block-start: rgba(245, 222, 179, 0.336);
-    background-color: rgba(245, 222, 179, 0.295);
-    margin-top: 3%;
+    background-color: rgba(245, 222, 179, 0.185);
+    margin-top: 4%;
     border-bottom: rgba(24, 20, 13, 0.336) 1px solid;
     box-shadow: rgba(0, 0, 0, 0.24);
-    color:rgb(226, 80, 43);
+    color:rgb(46, 35, 32);
     /* padding-top: -15%; */
 }
 
@@ -64,24 +69,36 @@ input:valid{
     margin-bottom: 0.5em;
     margin-left: auto;
     margin-right: auto;
-    border-style: dotted;
+    border-style: hidden;
     border-bottom-color: black;
     border-width: 2.7px;
     box-shadow: rgb(240, 21, 21);
     overflow: hidden;
 }
 
+.bg-img{
+    background-image: url('../images/agreement.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    /* filter: blur(8px); */
+    /* -webkit-filter: blur(8px); */
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
 #head{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-style: none;
-    font-size: 120%;
+    font-size: 100%;
     margin-left: 0%;
-    color:maroon;
-    margin-top: 0%;
+    color:rgb(61, 145, 12);
+    font-weight: 700;
 }
 
 #heading{
-    font-family: monospace;
+    font-family: 'Times New Roman', Times, serif;
     font-style: none;
     font-size: 200%;
     margin-left: 34%;
@@ -94,20 +111,20 @@ p{
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
     font-style: italic;
-    color: #000;
-    font-size: 100%;
+    color: blueviolet;
+    font-weight: 300;
+    font-size: 110%;
     
 }
 p a{
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
     font-style: italic;
-
     
 }
 
 button{
-    color:rgb(199, 151, 21);
+    color:rgb(236, 236, 234);
     background-color:rgb(81, 48, 172);
     border: #000 0.6px solid;
     border-radius: 5px;
@@ -163,44 +180,29 @@ h1{
     /* font-style: italic; */
     font-size: 140%;
     font-weight: 2000;
-    color: rgba(236, 196, 14, 0.959);
+    color: rgba(240, 198, 11, 0.959);
     width: 100%;
-    background: 20px 10px rgba(97, 102, 101, 0.342);
+    background: 20px 10px rgba(102, 100, 97, 0.342);
     margin-top: 0%;
-    padding: 1%;
+    padding: 0.5%;
     /* width: 100%; */
     
 
 }
 
-form{
-    background-color:rgba(245, 245, 245, 0.904);
-}
-
-.bg-img{
-    background-image: url('../images/agreement.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    /* filter: blur(8px); */
-    /* -webkit-filter: blur(8px); */
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(8px);
-}
 
 #response {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: left;
     text-decoration-style: none;
     color: #c2dfd7;
-    font-size: 60%;
+    font-size: 100%;
 }
 
 /* The alert message box */
 .alert {
-    padding: 20px;
-    background-color: #f32f0d86; /* Red */
+    padding: 10px;
+    background-color: #f3300d; /* Red */
     color: white;
     margin-bottom: 15px;
     width: 450px;
@@ -237,190 +239,21 @@ margin-left: auto;
 margin-right: auto;
 }
   
-  /* The close button */
-  .closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  /* When moving the mouse over the close button */
-  .closebtn:hover {
-    color: black;
-  }
+/* The close button */
+.closebtn {
+margin-left: 15px;
+color: white;
+font-weight: bold;
+float: right;
+font-size: 22px;
+line-height: 20px;
+cursor: pointer;
+transition: 0.3s;
+}
 
-
-
-@keyframes lds-ellipsis3 {
-0%, 25% {
-    left: 32px;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-50% {
-    left: 32px;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-75% {
-    left: 100px;
-}
-100% {
-    left: 168px;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-}
-@-webkit-keyframes lds-ellipsis3 {
-0%, 25% {
-    left: 32px;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-50% {
-    left: 32px;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-75% {
-    left: 100px;
-}
-100% {
-    left: 168px;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-}
-@keyframes lds-ellipsis2 {
-0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-25%, 100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-}
-@-webkit-keyframes lds-ellipsis2 {
-0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-25%, 100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-}
-@keyframes lds-ellipsis {
-0% {
-    left: 32px;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-25% {
-    left: 32px;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-50% {
-    left: 100px;
-}
-75% {
-    left: 168px;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-100% {
-    left: 168px;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-}
-@-webkit-keyframes lds-ellipsis {
-0% {
-    left: 32px;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-25% {
-    left: 32px;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-50% {
-    left: 100px;
-}
-75% {
-    left: 168px;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-100% {
-    left: 168px;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-}
-.lds-ellipsis {
-position: relative;
-}
-.lds-ellipsis > div {
-position: absolute;
--webkit-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-width: 40px;
-height: 40px;
-
-}
-.lds-ellipsis div > div {
-width: 40px;
-height: 40px;
-border-radius: 50%;
-background: #f00;
-position: absolute;
-top: 10px;
-left: 32px;
-bottom: 0px;
-padding: 1px;
--webkit-animation: lds-ellipsis 1s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
-animation: lds-ellipsis 1s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
-}
-.lds-ellipsis div:nth-child(1) div {
--webkit-animation: lds-ellipsis2 1s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
-animation: lds-ellipsis2 1s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
-background: #c2dfd7;
-}
-.lds-ellipsis div:nth-child(2) div {
--webkit-animation-delay: -0.5s;
-animation-delay: -0.5s;
-background: #ffe6f5;
-}
-.lds-ellipsis div:nth-child(3) div {
--webkit-animation-delay: -0.25s;
-animation-delay: -0.25s;
-background: #fe718d;
-}
-.lds-ellipsis div:nth-child(4) div {
--webkit-animation-delay: 0s;
-animation-delay: 0s;
-background: #e90c59;
-}
-.lds-ellipsis div:nth-child(5) div {
--webkit-animation: lds-ellipsis3 1s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
-animation: lds-ellipsis3 1s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
-background: #c2dfd7;
-}
-.lds-ellipsis {
-width: 200px !important;
-height: 200px !important;
--webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
-padding-bottom: 0%;
+/* When moving the mouse over the close button */
+.closebtn:hover {
+color: black;
 }
 
 
