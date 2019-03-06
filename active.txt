@@ -1,0 +1,544 @@
+// fetching all records created, they will load by default on loading the page
+document.getElementById('reports').addEventListener('submit',get_records());
+
+function get_records() {
+    
+    const route = 'https://databasetests.herokuapp.com/api/v2/records/';
+    access_token = localStorage.getItem('access_token');
+    const options = {
+        method : 'GET',
+        mode : 'cors',
+        headers : {
+            
+            'Authorization': `Bearer ${access_token}`
+        },
+        cache : 'no-cache'
+                    }
+    if (access_token == null || access_token === false){
+        // alert ("Login first ⛔🚫");
+        window.location.replace(
+            "index.html"
+            );
+        }
+
+    fetch(route,options)
+    .then (res => res.json())
+    .then (response_object => {
+        console.log(response_object)
+        if (response_object.msg == 'Successfully got all record  records'){
+            let output =``
+            for(n in response_object.data){
+                console.log(response_object.data[n]);
+                output += `<br><br>
+                <div class="four" id = "template">
+                <div class="four">
+                        <form style="background-image:url('images/paper.jpg')" >
+                                  <div class="five">
+                                    <img id="w" src="images/avatar1.png" alt="avatar"  >
+                                    <h2 id="user_id">${response_object.data[n]['user_name']}</h2>
+                                    <h1 id = "record_date">${response_object.data[n]['record_placement_date']}</h1><br><br>
+                                    <p2 id = "body">${response_object.data[n].body}</p2>
+                                    <br><br><br><br>
+            
+                                    <ul class='first'>
+                                    <h3 id = "inside-bars">
+                                        
+                                        <li id="record_type">${response_object.data[n]['record_type']}</li>
+                                        <li id ="status">${response_object.data[n].status}</li>
+                                        <li id = "record_geolocation" >${response_object.data[n]['record_geolocation']}</li>
+                                        <li id = "record_no" >${response_object.data[n]['record_no']}</li>
+                                        
+                                    </h3>
+                                    </ul>
+                                    
+                                    <div >
+                                        <button class="e" ><a  ></a></button>
+                                        
+                                    </div>
+                                
+                            </form>
+                        </div><br><br>
+                            `;
+            
+            console.log(output);
+            document.getElementById('fillin').innerHTML= output;};    
+        }
+        
+        else if (response.statusCode === 401 ){
+
+            window.location.replace(
+                "index.html"
+                );
+        }
+        else if (response.statusCode === 404){
+            alert ('no reports at the moment, Please create one ')
+            // window.location.assign(
+            //     "user_record.html"
+            //     );
+        }
+        else{
+
+            
+            window.location.replace(
+                "index.html"
+                );
+            
+        }
+        
+        
+    })
+    .catch(error => console.log(error));
+
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User dashboard|iReporter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/activity.css" />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- <script src="./JS/active.js"></script> -->
+</head>
+<body style="background-image:url('images/wood.jpeg');" id = body>
+    
+        <header style="background-image:url('images/smoke.jpeg')">
+            <ul class='first'>
+                <li id="two"><a href="user_record.html"> Post Report</a></li>
+                <li><a href="#" id="reports" type="submit" onclick="get_records();">Feed</a></li>
+                <li><a href="#" type="submit" onclick="get_redflags();" id="redflag">red_flags</a></li>
+                <li><a href="#" type="submit" onclick="get_interventions();" id="intervention">Interventions</a></li>
+                <li><a href="#" onclick="get_one_person_records();" id="profile" type ="submit"><img id="z" src="images/avatar1.png" alt="avatar"  ></a></li>
+                <li id="three"><a href="#" onclick="logout();">Logout</a></li>
+                <h>
+                    <input type="text" placeholder="Search.." name="search" id= "search-area">
+                    <button type="submit" id= "submit-button" onclick="get_one_record();" >S👀RCH</button>
+                </h>
+                
+                <!-- <h>HISTORY</h> -->
+            </ul>
+        </header>
+        <div id = "fillin" >
+        
+        
+        </div>
+        <br><br>
+        <br><br>
+        <br><br>
+        
+        
+
+        <div class="four" >
+                <div class="four" >
+                        <form style="background-image:url('images/paper.jpg')" >
+                                  <div class="five">
+<!--                                     
+                                    <img id="w" src="images/avatar1.png" alt="avatar"  >
+                                    <h2 id="user_id">Name</h2><h1 id = "record_date">23rd,December, 2018.</h1><br><br> -->
+                                    <p2 id = "body">Update and Delete here</p2>
+                                    <br><br><br><br>
+                                    <div id='map' style='width: 650px; height: 300px;'></div>
+                                        <pre id='info'></pre>
+                                        <div class="marker"></div>
+            
+                                    <ul class='first'>
+                                        
+                                    <!-- <h3 id = "inside-bars">
+                                        
+                                    
+                                        <li id="record_type">record_type</li>
+                                        <li id ="status"> record_status </li>
+                                        <li id = "record_geolocation" >geolocation</li>
+                                        <li id = "record_no" >record_id</li>
+                                        
+                                       
+                                        <!-- <input type="text" placeholder="Search.." name="Edit" id= "update"> -->
+                                    </h3> -->
+                                    </ul>
+                                    
+                                    <div >
+                                        <button class="e" id = "edit-button" type="submit" onclick="edit_record();"><a  >Edit</a></button>
+                                        <li id="del" type="submit" onclick= "delete_record();"> 🚮 </li>
+                                    </div>
+                                
+                            </form>
+        </div><br><br>
+                <!-- <div class="other">
+                <form id = "table" style="background-image:url('images/paper.jpg')">
+                    <table style="background-image:url('images/paper.jpeg')">
+                            <tr><th>Type</th><th>Accepted</th><th>Rejected</th><th>Pending approval</th></tr>
+                            <tr><td>Red-Flag</td><td>10</td><td>4</td><td>0</td></tr>
+                            <tr><td>Intervention</td><td>2</td><td>0</td><td>0</td></tr>
+                            
+
+                    </table>
+                      
+
+                      
+                    </div>
+              </form> -->
+    <script src="./JS/active.js"></script> 
+    <script src="./JS/get_one.js"></script>
+    <script src="./JS/edit.js"></script>
+    <script src="./JS/logout.js"></script>
+    <script src="./JS/profile.js"></script>
+    <script src="./JS/sample_get_one.js"></script> 
+   
+    
+</body>
+<script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibmljaG9sdXNtdXdvbmdlIiwiYSI6ImNqczc5a3VzdDA1NXEzeXBua3Z5cTZreW4ifQ.5bKx9vGtY_qLSwcxQ3Jwdw';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [32.57669254964398, 0.2510635733600992], // starting position
+        });
+        map.on('click', function (e) {
+        document.getElementById('info').innerHTML =
+            // e.point is the x, y coordinates of the mousemove event relative
+            // to the top-left corner of the map
+            // JSON.stringify(e.point) + '<br />' +
+            // e.lngLat is the longitude, latitude geographical position of the event
+            
+            
+            // let m= JSON.stringify(e.lngLat); 
+            `<label >Geoloacation</label>
+            <input type="text" value='${JSON.stringify(e.lngLat)}' id = "afterclick" placeholder="Main subject">`
+            
+            });
+    </script>
+</html>
+
+
+
+
+body,html
+{
+    padding: 0%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    margin: 0%;
+}
+
+form
+{
+   
+    /*background-color:rgb(119, 139, 139); /* Black w/opacity/see-through */
+    /*background-image:url=('images/paper.jpg');*/
+    margin-left: 10%;
+    font-weight: bold;
+    border: 0.51px solid grey;
+    height: -16px;
+    width: 50%;
+    padding: 30px;
+    padding-top: 140px;
+    text-align: none;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius:7px;
+    
+    
+}
+header
+{
+    position: fixed;
+    width: 100%;
+    height: 1px;
+    background-color:none;
+    background-image: image("images/face.jpeg");
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+    border-bottom-style:darkgrey solid 1px;
+    border-radius:0px; 
+    padding-bottom: 6%;
+}
+.first
+{
+    width: 900px;
+    float: left;
+    text-align: right;
+    color: #fff;
+    font-size: 17px;
+    height: 80px;
+    list-style: none;
+    margin-top: 0; 
+	margin-top: 0; 
+    margin-top: 0; 
+}
+.first li
+{
+    float: left;
+    padding:10px;
+    text-transform: capitalize;
+}
+.first li:last-child
+{
+    float: left;
+}
+
+.first li ul
+{
+    height: 150px;
+    display: none;
+    float: left;
+    list-style: none;
+    background-color: #333;
+    
+    
+}
+
+.first a
+{
+    color: rgb(182, 182, 183);
+    text-decoration: none !important;
+    float: left;
+}
+
+.first li:hover
+{
+    background-color: rgba(117, 94, 117, 0.452);
+    border-bottom-color: aqua;
+}
+
+/*p
+{
+    font-style: oblique;
+    top: 20%;
+    color: antiquewhite;
+}*/
+.five{margin-top: 10%;
+    position:unset;
+    color: antiquewhite;
+}
+#del {
+    cursor: pointer;
+    margin-top: -4%;
+    width: 10%;
+    margin-bottom: -12px;
+    color:thistle;
+    border: 1px solid rgba(189, 35, 35, 0.76);
+    height: 20px;
+    background-color:rgba(230, 121, 121, 0.459);
+    padding: 3px;
+    text-align: center;
+    border-radius:7px;
+    margin-left: 570px;
+    text-decoration: none;
+
+}
+.e  {
+    cursor: pointer;
+    margin-top: 5.3%;
+    width: 10%;
+    margin-bottom: -12px;
+    color:thistle;
+    border: 1px solid black;
+    height: 25px;
+    background-color:rgba(66, 65, 65, 0.459);
+    padding: 3px;
+    text-align: center;
+    border-radius:7px;
+    margin-left: 150px;
+    text-decoration: none;
+    /* opacity: -100px; */
+}
+
+#find{
+    cursor: pointer;
+    margin-top: -40px;
+    width: 10%;
+    margin-bottom: -7px;
+    color:gold;
+    border: 1px solid black;
+    height: 40px;
+    background-color:gold palevioletred;
+    padding: 3px;
+    text-align: center;
+    border-radius:7px;
+    margin-left: 300px;
+}
+button
+{
+    color:gold;
+    border-radius:7px;
+    background-color:gold palevioletred;
+    width: 19%;
+    padding: 3px;
+    
+
+}
+h2{
+    color: rgb(252, 239, 64);
+    
+}
+h1{
+    color: burlywood;
+    margin-left: 75%;
+    font-size: 13px;
+    margin-top: -10%;
+}
+
+#w
+{
+    margin-left: -3%;
+    margin-top: -90px;
+}
+#user_id{ margin-top: -7%;
+    margin-left: 100px;
+
+}
+
+#l{
+    margin-top: 70%;
+    text-align: center;
+}
+
+#y{
+    width: 100%;
+}
+
+#t{
+    
+    margin-left: 40%;
+    color: lightcoral;
+}
+h3{
+    margin-top: 10%;
+    color: lightcoral;
+}
+#inside-bar {
+    margin-top: -10%;
+    color: lightcoral;
+}
+#map{
+	box-shadow: rgb(211, 231, 236);
+    border:1px solid rgb(20, 5, 5);
+    margin-left: -1.5%;
+    
+}
+
+#afterclick{
+    border-radius:7px; 
+	width: 80%;
+	margin-bottom: 30px;
+	height: 40px;
+	padding: 5px;
+	text-align: center;
+	outline: none;
+    border: 1px solid rgb(20, 5, 5);
+	margin-top: -30%;
+	background-color: rgba(189, 169, 143, 0.582);
+}
+#inside-bars {
+    margin-top: 3%;
+    color: lightcoral;
+    margin-left: -6%;
+    width:80%;
+    font-size: 85%;
+}
+#search-area {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: rgba(54, 73, 73, 0.61);
+    font-size: 17px;
+    border: none;
+    /* cursor: pointer; */
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-block-end-style: double;
+    color: wheat;
+}
+#update_record_geolocation {
+    /* float: right; */
+    /* padding: 6px 10px; */
+    /* margin-top: 8px;
+    margin-right: 16px; */
+    background: rgba(54, 73, 73, 0.61);
+    font-size: 17px;
+    border: none;
+    /* cursor: pointer; */
+    /* border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px; */
+    /* border-block-end-style: double; */
+    border-radius: 5px;
+    color: rgba(214, 210, 199, 0.87);
+}
+
+#submit-button {
+    background:none;
+    float:none;
+    display: block;
+    width: 10%;
+    /* margin-right: 10px; */
+    padding: 7px;
+    cursor: pointer;
+    /*  */
+    float: right;
+    padding: 6px 4px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: rgb(33, 53, 65);
+    font-size: 17px;
+    border: none;
+}
+/* #body {
+    margin-top: -10%;
+} */
+
+h
+{
+    margin-left: 0%;
+    
+}
+
+#z{
+    size: -100%;
+    padding: -100%;
+    width: 40px;
+    margin-top: -10px;
+}
+
+table{
+    table-layout: auto;
+}
+table a {
+	color: #fff;
+}
+table a:hover {
+	text-decoration: underline;
+}
+table td, table th {
+	padding-left: 10px;
+}
+table tr:nth-of-type(even) {
+	height: 35px;
+	background-color: whitesmoke;
+}
+table tr:nth-of-type(odd) {
+	height: 35px;
+	background-color: whitesmoke;
+}
+
+#table
+{
+    width: 340px;
+    margin-left: 68%;
+    margin-top: -400%;
+    position: fixed;
+    border-radius: 8px;
+    height: 30%;
+    background-color:lightgrey;
+    padding-top: -70%;
+}
+
+#box{
+    margin-right: 0%;
+}

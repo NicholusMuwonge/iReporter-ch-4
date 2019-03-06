@@ -65,6 +65,9 @@ function postRecord(e) {
             
             
             document.getElementById('snackbar').innerHTML = `<div class="show" id="goodresponse"><p>Incident Successfuly Reported</p></div>`
+            window.location.replace(
+                "active.html"
+                );
             // document.getElementById('around').requestFullscreen()
             // record_title.re; 
             // record_geolocation.reset();

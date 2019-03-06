@@ -7,6 +7,7 @@ body {
     background-color:rgba(241, 238, 233, 0.781);	
     /* background-image: url('images/typewriter.jpg'); */
     font-style: initial;
+    
 }
 /* rgba(245, 222, 179, 0.719); */
 .userbox {
@@ -86,6 +87,7 @@ input:valid{
     /* -webkit-filter: blur(8px); */
     backdrop-filter: blur(80px);
     -webkit-backdrop-filter: blur(8px);
+    background-attachment: fixed;
 }
 
 #head{
