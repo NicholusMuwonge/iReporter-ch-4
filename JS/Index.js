@@ -27,22 +27,29 @@ function login() {
     .then (response_object => {
         console.log(response_object)
         if (response_object.error_message == "some fields are missing"){
-            return document.getElementById('error').innerHTML = "some fields \
-            are missing";
+            document.getElementById('response').innerHTML = `<p id= "response">some fields \
+            are missing</p>`;
+            setTimeout(function(){document.getElementById("response").style.display = "none";},5000);
         }
         else if (response_object.error_message == 'Please use character strings'){
             return document.getElementById('error').innerHTML = 'Please use\
             character strings';
         }
         else if (response_object.error_message == 'Some fields have no data'){
-            return document.getElementById('error').innerHTML = 'Some fields\
-            have no data';
+            document.getElementById('addin').innerHTML = `
+            <div class="alert" id="alert">
+            <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
+            <p id= "response">some fields are missing</p>`;
+            document.getElementById('gif').style.display = "none";
+            setTimeout(function(){document.getElementById("alert").style.display = "none";},5000);
         }
         else if (response_object.message == 'User does not exist.'){
-            return document.getElementById('addin').innerHTML = 
+            document.getElementById('addin').innerHTML = 
             `<div class="alert" id="alert">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
             <p id= "response">Invalid user credentials</p>`;
+            document.getElementById('gif').style.display = "none";
+            setTimeout(function(){document.getElementById("alert").style.display = "none";},5000);
         }
         else if (response_object.admin == "TRUE"){
             token = response_object.access_token;
@@ -50,9 +57,12 @@ function login() {
             document.getElementById('addin').innerHTML= `<div class="alerts" id="green">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
             <p id= "response">Your are successfully loged in 😋</p>`;
-            window.location.assign(
-                "admin_dashboard.html"  
-                ); //adminstrator dashbord using ghpages
+            document.getElementById('gif').style.display = "none";
+            setTimeout(function(){document.getElementById("alert").style.display = "none";},5000);
+            setTimeout("location.href = 'admin_claims.html'",5000);
+            // window.location.assign(
+            //     "admin_dashboard.html"  
+            //     ); //adminstrator dashbord using ghpages
 
             // alert ('Welcome dear adminstrator')
         }
@@ -67,9 +77,12 @@ function login() {
             `<div class="alerts" id="green">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
             <p id= "response">Your are successfully loged in 😋</p>`;
-            window.location.assign(
-                "active.html"
-                ); //user feed ghpages
+            document.getElementById('gif').style.display = "none";
+            setTimeout(function(){document.getElementById("alert").style.display = "none";},5000);
+            setTimeout("location.href = 'active.html'",5000);
+            // window.location.assign(
+            //     "active.html"
+            //     ); //user feed ghpages
             // alert ('Welcome dear concerned citizen')
         }
 
@@ -84,16 +97,8 @@ function on(e){
     e.preventDefault();
     document.getElementById('gif').innerHTML = 
     `<div class="loader" id="overlay" ><div class="duo duo1"><div class="dot dot-a"></div><div class="dot dot-b"></div></div><div class="duo duo2"><div class="dot dot-a"></div><div class="dot dot-b"></div></div></div>`;
-    setTimeout(function(){document.getElementById("gif").style.display = "none";},10000);
+    // setTimeout(function(){document.getElementById("gif").style.display = "none";},10000);
 }
     
-    // window.addEventListener("load",() => {
-    //     // e.preventDefault();
-    //     // return document.getElementById('gif').innerHTML = ``;
-    //     document.getElementById("overlay").style.display = "none";
-    // });
     
-    // document.onreadystatechange = function off(){
-    //     return document.getElementById("gif").innerHTML=``;
         
-    

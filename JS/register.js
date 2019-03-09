@@ -33,24 +33,30 @@ function signup(e) {
     .then (response_object => {
         console.log(response_object)
         if (user_password != password2){
-            return document.getElementById('addin').innerHTML = (
+            document.getElementById('addin').innerHTML = 
                 `<div class="alert" id="alert">
                 <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
                 <p id= "response">"Passwords dont match 😢 "</p>`
+            document.getElementById('gif').style.display = "none";
+            setTimeout(function(){document.getElementById("alert").style.display = "none";},5000);
                 
-            );
+            
         }
-        else if (response_object.error_message == 'some fields are missing'){
-            return document.getElementById('addin').innerHTML =
+        else if (response_object.error_message == 'Some fields have no data'){
+            document.getElementById('addin').innerHTML =
                 `<div class="alert" id="alert">
                 <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
-                <p id= "response">"some fields are missing "</p>'`;
+                <p id= "response">"some fields are missing "</p>`;
+            document.getElementById('gif').style.display = "none";
+            setTimeout(function(){document.getElementById("alert").style.display = "none";},5000);
         }
         else if (response_object.error_message == 'Password is wrong. It should be at-least 5 characters long, and alphanumeric.'){
-            return document.getElementById('addin').innerHTML =
+            document.getElementById('addin').innerHTML =
             `<div class="alert" id="alert">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
             <p id= "response">password cant be less than 5 characters </p>`;
+            document.getElementById('gif').style.display = "none";
+            setTimeout(function(){document.getElementById("alert").style.display = "none";},5000);
         }
         
         else if (response_object.error_message == "User email {0} is wrong, \
@@ -60,30 +66,41 @@ function signup(e) {
         }
         else if (response_object.error_message == "A name should consist of \
         only alphabetic characters"){
-            return document.getElementById('addin').innerHTML =
+            document.getElementById('addin').innerHTML =
             `<div class="alert" id="alert">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
             <p id= "response">name can only be in alphabet </p>`;
+            document.getElementById('gif').style.display = "none";
+            setTimeout(function(){document.getElementById("alert").style.display = "none";},5000);
         }
 
         else if (response_object.error_message == 'email already exists'){
-            return document.getElementById('addin').innerHTML =
+            document.getElementById('addin').innerHTML =
                 `<div class="alert" id="alert">
                 <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
                 <p id= "response">You seem to be registered,login instead</p>`;
+            document.getElementById('gif').style.display = "none";
+            setTimeout(function(){document.getElementById("alert").style.display = "none";},5000);
         }
 
         else if (response_object.error_message == 'Username already taken'){
-            return document.getElementById('addin').innerHTML =
+            document.getElementById('addin').innerHTML =
             `<div class="alert" id="alert">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
-            <p id= "response">Username is already taken</p>`;        }
+            <p id= "response">Username is already taken</p>`; 
+            document.getElementById('gif').style.display = "none";
+            setTimeout(function(){document.getElementById("alert").style.display = "none";},5000);
+                   }
 
         else if (response_object.status == 'success'){
-            return document.getElementById('addin').innerHTML =
+            document.getElementById('addin').innerHTML =
             `<div class="alerts" id="green">
             <span class="closebtn" onclick= "this.parentElement.style.display='none';" > &times;</span>
-            <p id= "response">Your account has been created successfully 😋</p>`;
+            <p id= "response">Your account has been created successfully 😋\
+                            You can go ahead login  now</p>`;
+            document.getElementById('gif').style.display = "none";
+            setTimeout(function(){document.getElementById("green").style.display = "none";},5000);
+            setTimeout("location.href = 'index.html'",5000);
         }
         
     })

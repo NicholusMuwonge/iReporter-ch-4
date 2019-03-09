@@ -3,13 +3,13 @@ document.getElementById('intervention').addEventListener('submit',get_interventi
 document.getElementById('redflag').addEventListener('submit',get_redflags());
 
 
-function get_one_record() {
+function get_one_record(record_no) {
 
 
-    let record_no = document.getElementById('search-area').value;
+    // let record_no = document.getElementById('search-area').value;
     access_token = localStorage.getItem('access_token');
     const route = 'https://databasetests.herokuapp.com/api/v2/auth/record/'+record_no+'/';
-    user_name = localStorage.getItem('user_name');
+    // user_name = localStorage.getItem('user_name');
 
     const options = {
         method : 'GET',
