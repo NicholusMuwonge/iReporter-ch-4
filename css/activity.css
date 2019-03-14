@@ -917,6 +917,34 @@ content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 
+#home{
+    color: aqua;
+}
+#home:hover{
+    color: darkcyan;
+}
+#blue{
+    color:greenyellow;
+}
+#blue:hover{
+    color:rgb(236, 240, 13);
+}
+
+#profile{
+    color:gainsboro;
+}
+#profile:hover{
+    color:rgb(147, 240, 224);
+}
+#red{
+    color:lightcoral;
+}
+#red:hover{
+    color:rgb(253, 22, 222);
+}
+
+
+
 
 
 

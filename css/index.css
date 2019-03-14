@@ -18,11 +18,11 @@ body {
 	box-shadow: 0 4px 12px rgba(78, 194, 223, 0.329);
     border-radius: 8px;
     height: 400px;
-    padding-top: 8px;
+    padding-top: 0px;
     border: rgba(115, 207, 235, 0.651) 0.2px solid;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 2%;
+    margin-top: 12%;
     
 }
 
@@ -33,7 +33,7 @@ form{
 input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
 	border-radius:3px; 
 	width: 430px;
-	margin-bottom: -4.9%;
+	margin-bottom: 3%;
 	height: 40px;
 	padding: 5px;
 	text-align: center;
@@ -41,7 +41,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
     border: 0.6px solid rgb(207, 192, 103);
     border-block-start: rgba(245, 222, 179, 0.336);
     background-color: rgba(245, 222, 179, 0.185);
-    margin-top: 4%;
+    margin-top: -5%;
     border-bottom: rgba(24, 20, 13, 0.336) 1px solid;
     box-shadow: rgba(0, 0, 0, 0.24);
     color:rgb(46, 35, 32);
@@ -82,7 +82,7 @@ input:valid{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    /* height: 100%; */
     /* filter: blur(8px); */
     /* -webkit-filter: blur(8px); */
     backdrop-filter: blur(80px);
@@ -93,10 +93,117 @@ input:valid{
 #head{
     font-family: 'Courier New', Courier, monospace;
     font-style: none;
-    font-size: 100%;
+    font-size: medium;
     margin-left: 0%;
     color:rgb(61, 145, 12);
     font-weight: 700;
+    margin-top: -22%;
+    
+}
+
+.topbar{
+    background-color: rgba(2, 15, 34, 0.966);
+    padding:40px;
+    color: white;
+    position: fixed;
+    width: 100%;
+
+}
+
+
+#signin{
+    background-color: rgb(11, 114, 11);
+    padding: 12px;
+    margin-left: 45%;
+    padding-left: 75px;
+    padding-right: 75px;
+    outline: none;
+    border: darkgreen 1px solid;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:medium;
+    font-weight: 500;
+    position: fixed;
+    margin-top: -1.9%;
+    cursor: pointer;
+    /* font-style: oblique; */
+    /* text-emphasis: none; */
+    text-decoration:none;
+    
+
+    
+}
+#signin:hover{
+    background-color: purple;
+}
+#titles{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(146, 143, 137);
+    font-weight: 600;
+    font-size: x-large;
+    position: fixed;
+    margin-top: -1.5%;
+
+}
+#signup{
+        background-color: rgb(4, 34, 48);
+        padding: 12px;
+        margin-left: 65%;
+        padding-left: 75px;
+        padding-right: 75px;
+        outline: none;
+        border: darkgreen 1px solid;
+        border-radius: 3px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size:medium;
+        font-weight: 500;
+        position: fixed;
+        margin-top: -1.9%;
+        cursor: pointer;
+}
+
+#signup:hover{
+    background-color: purple;
+}
+
+#intro{
+    padding: 10%;
+    margin-left: 5%;
+    background-color:rgba(26, 2, 26, 0.788);
+    text-align: right;
+    width: 70%;
+    /* padding-top: 0%; */
+    /* overflow: scroll; */
+    content: inherit;
+    border-radius: 7px;
+    
+
+}
+
+hr{
+    background-color: red;
+    color: #000;
+}
+
+#moreInfo{
+    background-color: rgba(250, 248, 250, 0.925);
+    padding:10%;
+    width: 70%;
+    margin-left: 5%;
+    border-radius: 7px;
+    color: rgb(44, 30, 2);
+    font-size: x-large;
+    text-align: left;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 500;
+}
+
+#footnote{
+    /* position: fixed; */
+    margin-top: 30%;
+    color: #000;
+    /* padding-bottom: 10%; */
+    /* position: fixed; */
 }
 
 #heading{
@@ -116,6 +223,7 @@ p{
     color: blueviolet;
     font-weight: 300;
     font-size: 110%;
+    margin-top: 0%;
     
 }
 p a{
@@ -181,16 +289,23 @@ h1{
     text-align: center;
     text-decoration-style: dotted;
     /* font-style: italic; */
-    font-size: 140%;
+    font-size: x-large;
     font-weight: 2000;
-    color: rgba(240, 198, 11, 0.959);
+    color: rgba(231, 218, 157, 0.959);
     width: 100%;
-    background: 20px 10px rgba(102, 100, 97, 0.342);
+    /* background: 20px 10px rgba(102, 100, 97, 0.342); */
     margin-top: 0%;
     padding: 0.5%;
     /* width: 100%; */
+    /* text-decoration: overline; */
     
 
+}
+
+#messages{
+    color: white;
+    font-size:x-large;
+    text-align: left;
 }
 
 
@@ -220,6 +335,7 @@ h1{
     transition: opacity 2s ease-in;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10%;
     
   }
 
@@ -240,6 +356,7 @@ border-radius: 8px;
 transition: opacity 2s ease-in;
 margin-left: auto;
 margin-right: auto;
+margin-top: 10%;
 }
   
 /* The close button */
@@ -264,8 +381,8 @@ color: black;
 position: relative;
 width: 40px;
 margin: 100px auto;
-padding-top: -10%;
-top: -110px;
+padding-top: -15%;
+top: -150px;
 padding-bottom: -10px;
 transition: opacity 2s;
 /* -webkit-animation: fadein 2s; */
